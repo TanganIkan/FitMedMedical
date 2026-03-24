@@ -1,0 +1,106 @@
+import { Instagram, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-slate-950 text-white pt-24 pb-12 overflow-hidden relative">
+      {/* SHAPE BACKGROUND (Sudut Kanan Bawah) */}
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/2 opacity-[0.03] pointer-events-none">
+        <svg width="100%" height="100%" viewBox="0 0 500 500" preserveAspectRatio="none">
+          <path d="M500,500 L0,500 L500,0 Z" fill="currentColor" className="text-blue-500" />
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-20">
+          {/* KOLOM 1: BRANDING */}
+          <div className="lg:col-span-4">
+            <div className="flex items-center gap-2 mb-8">
+              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl italic shadow-lg shadow-blue-600/20">T</div>
+              <span className="text-2xl font-black tracking-tighter uppercase italic">
+                Trishnanda <span className="text-blue-500">Care</span>
+              </span>
+            </div>
+            <p className="text-slate-400 leading-relaxed max-w-sm mb-8 font-medium">Providing premium medical services directly to your doorstep in Bali. Certified professionals, trusted healthcare, 24/7.</p>
+            <div className="flex gap-4">
+              <a href="#" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* KOLOM 2: QUICK LINKS */}
+          <div className="lg:col-span-2">
+            <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500">Navigation</h4>
+            <ul className="space-y-4">
+              {["Home", "Services", "Team", "Blog"].map((item) => (
+                <li key={item}>
+                  <Link href={`#${item.toLowerCase()}`} className="text-slate-400 hover:text-white transition-colors font-bold text-sm flex items-center gap-2 group">
+                    <span className="w-0 h-[2px] bg-blue-500 transition-all group-hover:w-3"></span>
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* KOLOM 3: SERVICES */}
+          <div className="lg:col-span-3">
+            <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500">Medical Services</h4>
+            <ul className="space-y-4">
+              {["Vaccinations", "IV Vitamin Therapy", "Medical Tests", "Doctor Visit"].map((item) => (
+                <li key={item} className="text-slate-400 font-bold text-sm cursor-default flex items-center gap-2">
+                  <div className="w-1 h-1 bg-slate-700 rounded-full"></div>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* KOLOM 4: CONTACT */}
+          <div className="lg:col-span-3">
+            <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500">Contact Us</h4>
+            <div className="space-y-6">
+              <div className="flex gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-lg">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">WhatsApp 24/7</p>
+                  <p className="text-sm font-bold text-slate-200">+62 812 3456 7890</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-500 shrink-0">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">Our Base</p>
+                  <p className="text-sm font-bold text-slate-200">Denpasar, Bali, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* BOTTOM BAR */}
+        <div className="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">© {currentYear} Trishnanda Care Centre. Built with ❤️ in Bali.</p>
+          <div className="flex gap-8">
+            <Link href="#" className="text-slate-500 hover:text-blue-500 text-[10px] font-black uppercase tracking-widest transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="#" className="text-slate-500 hover:text-blue-500 text-[10px] font-black uppercase tracking-widest transition-colors">
+              Terms of Service
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
