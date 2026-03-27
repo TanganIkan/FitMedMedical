@@ -57,17 +57,20 @@ export default function Hero() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-4xl font-extrabold text-slate-950 tracking-tighter sm:text-5xl md:text-6xl leading-[0.95] max-w-xl"
+              className="text-3xl sm:text-5xl md:text-6xl font-black text-slate-950 tracking-tighter leading-[0.95] max-w-2xl"
             >
-              <span className="block">Medical Care Provided by</span>
-              <span className="block text-blue-600">
-                Professionals <span className="text-slate-950">in</span>
+              <span className="block mb-2">Medical Care by</span>
+              <span className="relative inline-block text-blue-600 mb-2">
+                Professionals
+                <motion.span initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ delay: 1, duration: 0.8 }} className="absolute bottom-0 left-0 h-2 bg-blue-100 -z-10 rounded-full" />
               </span>
-              <span className="block">Your Home.</span>
+              <span className="block">
+                in Your <span className="text-slate-400">Home.</span>
+              </span>
             </motion.h1>
 
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mt-6 text-base text-slate-600 sm:text-xl max-w-xl leading-relaxed">
-              Trishnanda Care Centre provides top-quality healthcare services that are fast, reliable, and supervised by a team of medical experts, delivered directly to your villa, hotel, or residence in Bali.
+              Fit Med Medical Care Centre provides top-quality healthcare services that are fast, reliable, and supervised by a team of medical experts, delivered directly to your villa, hotel, or residence in Bali.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className="mt-12 flex flex-wrap gap-4 items-center">
@@ -76,7 +79,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2.5 px-8 py-4 border border-transparent text-base font-bold rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 transition-all transform hover:scale-105 active:scale-95 group"
               >
                 <Phone className="w-5 h-5 group-hover:animate-bounce" />
-                Make an appointment →
+                Free Consultation →
               </Link>
               <div className="flex items-center gap-2 text-slate-500 text-sm">
                 <CheckCircle2 className="w-5 h-5 text-emerald-500" />
@@ -85,7 +88,6 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT IMAGE */}
           <motion.div initial={{ opacity: 0, scale: 0.8, rotate: 2 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="mt-16 lg:mt-0 lg:col-span-5 relative z-20">
             <div className="relative mx-auto w-full max-w-sm lg:max-w-none rounded-[32px] overflow-hidden shadow-[0_32px_80px_rgb(0,0,0,0.15)] border-8 border-white group">
               <img
@@ -94,7 +96,7 @@ export default function Hero() {
                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
-            {/* Background Decor Anim */}
+
             <motion.div
               animate={{ rotate: [-12, -8, -12], scale: [1, 1.05, 1] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -103,7 +105,6 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* HIGHLIGHTS - ON SCROLL ANIMATION */}
         <div className="mt-28 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, index) => (
             <motion.div

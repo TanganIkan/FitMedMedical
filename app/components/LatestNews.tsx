@@ -33,7 +33,7 @@ export default async function LatestNews() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-sm">Health Journal</div>
           <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter leading-[0.9] mb-8">
-            Latest <span className="text-blue-600">News</span> & Articles.
+            Latest <span className="text-blue-600 underline decoration-blue-100 underline-offset-8">News</span> & Articles.
           </h2>
         </div>
 

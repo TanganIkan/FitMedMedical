@@ -50,12 +50,11 @@ export default function PromotionCarousel() {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Header Animation */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-100 text-rose-600 text-[11px] font-bold uppercase tracking-widest mb-4">March Deal: 5% Off Before 7 AM</div>
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-              Special <span className="text-blue-600 font-black">IV Therapy</span> Packages.
+              Special <span className="text-blue-600 underline decoration-blue-100  font-black underline-offset-8">IV Therapy</span> Packages.
             </h2>
           </motion.div>
 

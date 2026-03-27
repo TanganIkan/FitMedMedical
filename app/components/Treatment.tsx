@@ -12,7 +12,6 @@ interface TreatmentsProps {
   onOpenModal: (type: string) => void;
 }
 
-// 1. Tambahkan tipe ': Variants' di sini
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -21,7 +20,6 @@ const containerVariants: Variants = {
   },
 };
 
-// 2. Tambahkan tipe ': Variants' di sini juga
 const itemVariants: Variants = {
   hidden: { opacity: 0, x: 50 },
   visible: {
@@ -57,7 +55,6 @@ export default function Treatments({ onOpenModal }: TreatmentsProps) {
             <p className="mt-8 text-lg text-slate-500 leading-relaxed max-w-xl font-medium">From vaccinations to advanced screenings, Trishnanda Care Centre brings certified medical expertise right to your doorstep.</p>
           </motion.div>
 
-          {/* RIGHT SIDE: Animated List */}
           <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="lg:col-span-8 space-y-4">
             {treatmentsData.map((item, index) => (
               <motion.button

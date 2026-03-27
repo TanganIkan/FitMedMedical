@@ -1,8 +1,11 @@
 import Hero from "./components/Hero";
-import PromotionCarousel from "./components/PromotionCarousel";
-import ServicesGrid from "./components/ServicesGrid";
+import PromotionCarousel from "./promotion/PromotionCarousel";
+import Services from "./components/Services";
 import OurTeam from "./components/OurTeam";
 import LatestNews from "./components/LatestNews";
+import Testimoni from "./components/Testimoni";
+import Partner from "./components/Partner";
+import Maps from "./components/Maps";
 import HomeClientWrapper from "./components/HomeClientWrapper";
 
 export default function Home() {
@@ -10,15 +13,21 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
 
-      <PromotionCarousel />
+      {/* <PromotionCarousel /> */}
 
-      <ServicesGrid />
+      <Services />
 
       <OurTeam />
 
       <HomeClientWrapper />
 
       <LatestNews />
+
+      <Testimoni />
+
+      <Partner />
+
+      <Maps />
     </main>
   );
 }
