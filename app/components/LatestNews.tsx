@@ -1,30 +1,15 @@
-import { client } from "@/sanity/lib/client";
+"use client"; // Tambahkan ini jika file ini berada di dalam components/
+
 import { Calendar, ArrowRight, BookOpen } from "lucide-react";
 import Link from "next/link";
+// 1. IMPORT DATA DUMMY & TYPE
+import { blogData, BlogPost } from "../lib/blog-data";
 
-interface Post {
-  _id: string;
-  title: string;
-  slug: string;
-  image: string;
-  date: string;
-  category?: string;
-  excerpt?: string;
-}
+export default function LatestNews() {
+  // 2. AMBIL 3 ARTIKEL TERBARU SAJA
+  const posts = blogData.slice(0, 3);
 
-export default async function LatestNews() {
-  const query = `*[_type == "post"] | order(publishedAt desc)[0...3] {
-    _id,
-    title,
-    "slug": slug.current,
-    "image": mainImage.asset->url,
-    "date": publishedAt,
-    "category": categories[0]->title,
-    "excerpt": excerpt
-  }`;
-
-  const posts: Post[] = await client.fetch(query);
-
+  // Jika data kosong, tidak render apa-apa
   if (!posts || posts.length === 0) return null;
 
   return (
@@ -38,9 +23,9 @@ export default async function LatestNews() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post) => (
+          {posts.map((post: BlogPost) => (
             <Link
-              key={post._id}
+              key={post.id}
               href={`/blog/${post.slug}`}
               className="group flex flex-col bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-2 h-full"
             >
@@ -54,12 +39,8 @@ export default async function LatestNews() {
               <div className="p-8 flex flex-col flex-grow">
                 <div className="flex items-center gap-2 text-slate-400 text-[11px] mb-4 font-bold uppercase tracking-wider">
                   <Calendar className="w-3.5 h-3.5 text-blue-500" />
-
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
+                  {/* Format tanggal dari string dummy */}
+                  {post.date}
                 </div>
 
                 <h3 className="text-xl font-black text-slate-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">{post.title}</h3>
@@ -74,6 +55,7 @@ export default async function LatestNews() {
             </Link>
           ))}
         </div>
+
         <div className="mt-20 text-center">
           <Link
             href="/blog"
