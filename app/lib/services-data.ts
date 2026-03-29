@@ -236,6 +236,12 @@ export const servicesData = [
             price: "250.000",
             desc: "Accurate testing to detect active COVID-19 infection for early diagnosis and safe travel or work clearance.",
             image: "/images/lab-covid.jpg",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Early detection of COVID-19 infection \n • Supports timely isolation and treatment decisions \n • Required for travel, work, or medical clearance \n • Helps prevent the spread of the virus to others \n • Reliable laboratory results (PCR) and rapid screening (Antigen)",
+              },
+            ],
           },
           {
             id: "dengue-fever",
@@ -243,6 +249,12 @@ export const servicesData = [
             price: "450.000",
             desc: "Blood test to detect dengue infection early and help prevent severe complications.",
             image: "/images/lab-dengue.jpg",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Early detection for faster medical intervention \n • Helps prevent severe complications \n • Supports accurate diagnosis and proper monitoring \n • Safe and hygienic blood sample procedure \n • Reliable laboratory results",
+              },
+            ],
           },
           {
             id: "malaria-test",
@@ -250,6 +262,12 @@ export const servicesData = [
             price: "350.000",
             desc: "Rapid diagnostic test to identify malaria infection and guide timely treatment.",
             image: "/images/lab-malaria.jpg",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Rapid detection of malaria infection \n • Enables timely and appropriate treatment \n • Helps prevent severe complications \n • Simple and minimally invasive blood sample procedure \n • Reliable and accurate laboratory results",
+              },
+            ],
           },
           {
             id: "typhoid-fever",
@@ -257,6 +275,12 @@ export const servicesData = [
             price: "350.000",
             desc: "Laboratory test to diagnose typhoid fever and support proper medical treatment.",
             image: "/images/lab-typhoid.jpg",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Early detection of typhoid infection \n • Supports accurate diagnosis and proper treatment \n • Helps prevent complications from delayed treatment \n • Safe and hygienic sample collection procedure \n • Reliable laboratory results for effective monitoring",
+              },
+            ],
           },
           {
             id: "sti-panel",
@@ -264,6 +288,12 @@ export const servicesData = [
             price: "850.000",
             desc: "Comprehensive screening to detect sexually transmitted infections accurately and confidentially.",
             image: "/images/lab-sti.jpg",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Early detection of common sexually transmitted infections \n • Accurate and reliable laboratory results \n • Confidential and discreet testing process \n • Supports timely and appropriate medical treatment \n • Helps prevent complications and transmission to partners",
+              },
+            ],
           },
         ],
       },
@@ -301,16 +331,82 @@ export const servicesData = [
     subServices: [
       {
         id: "wound-care",
-        name: "Wound Care",
-        price: "350.000",
+        name: "Wound and Care",
+        price: "500.000",
         image: "/images/wound-care.jpg",
-        desc: "Professional dressing and treatment for injuries.",
-        benefits: [{ title: "Sterile", text: "Prevents infection." }],
+        desc: "Comprehensive healthcare services covering expert wound and ostomy care, advanced wound dressing techniques, precise minor surgical procedures, and thorough post-surgical care to support optimal recovery.",
+        benefits: [
+          {
+            title: "Benefit",
+            text: "• Wound and Ostomy Care \n • Advanced Wound Dressing \n • Minor Surgeries\n• Post-Surgical Care",
+          },
+        ],
       },
-      { id: "monitoring", name: "Monitoring & Prevention", price: "300.000", image: "/images/monitoring.webp", desc: "Regular vital sign checks.", benefits: [] },
-      { id: "nurse-visit", name: "Nurse Home Visit", price: "450.000", image: "/images/nurse-visit.jpg", desc: "Dedicated nursing care.", benefits: [] },
-      { id: "pediatric-care", name: "Pediatric Home Care", price: "550.000", image: "/images/pediatric.webp", desc: "Medical attention for children.", benefits: [] },
-      { id: "ent-care", name: "Otolaryngology Home Care", price: "500.000", image: "/images/ent.webp", desc: "Ear, nose, and throat care.", benefits: [] },
+      {
+        id: "monitoring",
+        name: "Monitoring & Prevention",
+        price: "200.000",
+        image: "/images/monitoring.webp",
+        desc: "Ensuring patient well-being through continuous vital sign monitoring and implementing preventive measures to reduce the risk of infections.",
+        benefits: [
+          {
+            title: "Benefit",
+            text: "• Vital Sign Monitoring\n• Infection Prevention",
+          },
+        ],
+      },
+      {
+        id: "nurse-visit",
+        name: "Nurse Home Visit",
+        price: "250.000",
+        image: "/images/nurse-visit.jpg",
+        desc: "A Nurse Home Visit delivers professional healthcare directly to your home, providing personalized assessments, treatments, and health education.",
+        benefits: [
+          {
+            title: "Benefit",
+            text: "• Convenience\n• Personalized Care\n• Timely Intervention\n• Enhanced Relationship\n• Accessibility",
+          },
+        ],
+      },
+      {
+        id: "pediatric-care",
+        name: "Pediatric Home Care",
+        price: "700.000",
+        image: "/images/pediatric.webp",
+        desc: "Pediatric home care provides specialized medical services for children directly in their homes, ensuring comfort, safety, and convenient healthcare.",
+        benefits: [
+          {
+            title: "Benefit",
+            text: "• Convenience\n• Personalized Care\n• Reduced Stress\n• Improved Compliance\n• Family Involvement",
+          },
+        ],
+      },
+      {
+        id: "ent-care",
+        name: "Otolaryngology Home Care",
+        price: "700.000",
+        image: "/images/ent.webp",
+        desc: "Otolaryngology home care provides specialized medical services for ear, nose, and throat conditions directly in the comfort of the patient's home.",
+        benefits: [
+          {
+            title: "Benefit",
+            text: "• Convenience\n• Personalized Care\n• Comfort\n• Reduced Infection Risk\n• Family Involvement",
+          },
+        ],
+      },
+      {
+        id: "dengue-fever",
+        name: "Dengue Fever Home Care",
+        price: "850.000",
+        image: "/images/dengue-homecare.jpg",
+        desc: "Dengue fever home care focuses on treating and managing dengue symptoms at home, supporting patient recovery while reducing transmission risks and hospital-related complications.",
+        benefits: [
+          {
+            title: "Benefit",
+            text: "• Comfortable Recovery Environment \n • Reduced Transmission Risk \n• Personalized Treatment\n• Regular Monitoring\n• Avoidance of Hospital Risks",
+          },
+        ],
+      },
     ],
   },
   {
@@ -318,11 +414,222 @@ export const servicesData = [
     title: "IV Therapy Services",
     icon: Syringe,
     subServices: [
-      { id: "bali-belly", name: "Bali Belly Infusion", price: "1.100.000", image: "/images/bali-belly.jpg", desc: "Hydration for stomach flu.", benefits: [] },
-      { id: "immune-booster", name: "Super Immune Booster", price: "1.500.000", image: "/images/immune-booster.jpg", desc: "High dose Vitamin C.", benefits: [] },
-      { id: "hangover-infusion", name: "Hangover Infusion", price: "950.000", image: "/images/hangover.webp", desc: "Recover fast from a night out.", benefits: [] },
-      { id: "gastritis-infusion", name: "GERD / Gastritis Infusion", price: "1.000.000", image: "/images/gastritis.webp", desc: "Medication for stomach acid.", benefits: [] },
-      { id: "nad-plus", name: "Pure NAD+ Anti Aging", price: "3.500.000", image: "/images/nad-plus.jpg", desc: "Regenerate cells.", benefits: [] },
+      {
+        id: "bali-belly",
+        name: "Bali Belly Infusion",
+        price: "1.990.000",
+        image: "/images/bali-belly.jpg",
+        desc: "Rapid GI reset hydration. Reduces nausea, relieves stomach cramps, and supports gut lining with electrolytes, anti-nausea agents, and essential vitamins.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "Therapeutic Components:\n• Saline infusion solution (NaCl 0,9%) 500ml\n• Pain Killer IV\n• Anti-Vomiting IV\n• Gaster Protector IV\n\nVitamin Boosters:\n• Vitamin C\n• Vitamin B1, B2, B3, B5, B6",
+          },
+        ],
+      },
+      {
+        id: "super-bali-belly",
+        name: "Super Bali Belly IV",
+        price: "2.190.000",
+        image: "/images/super-bali-belly.jpg",
+        desc: "Advanced gut recovery & immunity boost. Enhances digestive relief with electrolytes, zinc, probiotics, and vitamins-protects gut barrier while strengthening your immune system.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "Therapeutic Components:\n• Saline infusion solution (NaCl 0,9%) 500ml\n• Pain Killer IV\n• Anti-Vomiting IV\n• Stomach Protector IV\n\nVitamin Boosters:\n• Vitamin C, B1, B2, B3, B5, B6, B12\n• Folic Acid, Biotin, Zinc (20mg), Probiotics",
+          },
+        ],
+      },
+      {
+        id: "nad-plus",
+        name: "Pure NAD+ Anti Aging",
+        price: "2.390.000",
+        image: "/images/nad-plus.jpg",
+        desc: "Pure NAD+ infusion for anti-aging & cellular renewal. High-dose NAD+ fuels mitochondria, boosts DNA repair. Get optimal results with an oversight by our certified doctor.",
+        benefits: [
+          {
+            title: "Benefit",
+            text: "• Anti-Aging and Chronic Disease\n• Energy and Mental Health\n• Healthspan and Human Performance\n• Reduced Fatigue and More Energy\n• Increased Endurance and Physical Performance",
+          },
+          {
+            title: "Composition",
+            text: "• Saline infusion solution (NaCl 0,9%) 500ml\n• Nicotinamide Adenine Dinucleotide (100mg-750mg)",
+          },
+        ],
+      },
+      {
+        id: "booster-nad-plus",
+        name: "Booster NAD+ Anti Aging",
+        price: "1.900.000",
+        image: "/images/booster-nad.jpg",
+        desc: "Energy, anti-aging & cellular repair. NAD+ infusion enhances mitochondrial function, supports DNA repair, cognitive clarity, endurance, and oxidative defense.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Saline solution 500ml\n• Vitamin A, C, D, E\n• Vitamin B-Complex (B1, B2, B5, B6, B7, B12)\n• Folic Acid, Zinc, L-carnitine, Magnesium",
+          },
+        ],
+      },
+      {
+        id: "basic-immune",
+        name: "Basic Immune Booster",
+        price: "1.675.000",
+        image: "/images/basic-immune.jpg",
+        desc: "Foundational immune support. Delivers electrolytes, Vitamin B-Complex, and Vitamin C to boost your defenses, energy, and collagen synthesis.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Ringers Lactate / Saline 500ml\n• Vitamin B-Complex (B1, B2, B6, B12)\n• Biotin, Folic Acid, Niacinamide, Pantothenic Acid\n• Vitamin C (1,000 mg)",
+          },
+        ],
+      },
+      {
+        id: "standard-immune",
+        name: "Standard Immune Booster",
+        price: "2.075.000",
+        image: "/images/standard-immune.jpg",
+        desc: "Enhanced immune formula. High-dose Vitamin C, B-Complex, and electrolytes to power metabolism, energy, red blood cells, and skin health.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Ringers Lactate / Saline 500ml\n• Vitamin C (2,100 mg)\n• Vitamin B-Complex (B1, B2, B6, B12)\n• Niacinamide, Pantothenic Acid, Folic Acid, Biotin",
+          },
+        ],
+      },
+      {
+        id: "super-immune",
+        name: "Super Immune Booster",
+        price: "2.440.000",
+        image: "/images/super-immune.jpg",
+        desc: "Potent IV drip combining electrolytes, NAC-Glutathione, Zinc, and extensive vitamins. Delivers formidable immune enhancement and antioxidant defenses.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Saline 500ml, Zinc (5 mg), NAC-Glutathione (30 mg)\n• Vitamin A, C, D3, E\n• Vitamin B-Complex (B1, B2, B5, B6, B12)\n• Folic Acid, Biotin, Niacinamide",
+          },
+        ],
+      },
+      {
+        id: "hangover-infusion",
+        name: "Hangover Infusion",
+        price: "1.490.000",
+        image: "/images/hangover.webp",
+        desc: "Quick 30-60 minute procedure designed to help relieve hangover symptoms through rapid hydration and a targeted combination of vitamins and electrolytes.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Saline 500ml\n• Pain Killer IV\n• Anti-Vomiting IV\n• Gaster Protector IV\n• Vitamin B1, B6, B12",
+          },
+        ],
+      },
+      {
+        id: "fever-infusion",
+        name: "Fever Infusion",
+        price: "1.190.000",
+        image: "/images/fever-infusion.jpg",
+        desc: "Rapid recovery of high fever for adults through intravenous and can be beneficial to restore body fluids.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Paracetamol IV\n• RL (Electrolytes) 500ml",
+          },
+        ],
+      },
+      {
+        id: "gastritis-infusion",
+        name: "GERD / Gastritis Infusion",
+        price: "1.890.000",
+        image: "/images/gastritis.webp",
+        desc: "Useful for treating inflammation in the stomach or gaster caused by irritation due to stomach acid.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Saline 500ml\n• Pain Killer IV\n• Anti-Vomiting IV\n• Gaster Protector IV\n• Vitamin B1, B6, B12",
+          },
+        ],
+      },
+      {
+        id: "iron-infusion",
+        name: "Iron Infusion",
+        price: "1.790.000",
+        image: "/images/iron-infusion.jpg",
+        desc: "An effective treatment for iron deficiency, the condition that causes tiredness and affects your ability to function.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Saline infusion solution (NaCl 0.9%) 100ml\n• Crystalloid (Ringers Lactate) 500ml\n• Vitamin C (1,000 mg)\n• Vitamin B Complex (5,000 mg)\n• Iron Sucrose Complex (100 mg)",
+          },
+        ],
+      },
+      {
+        id: "candida-iv",
+        name: "Candida IV Treatment",
+        price: "1.400.000",
+        image: "/images/candida-iv.jpg",
+        desc: "Candida control infusion. Tackles yeast overgrowth at its source with targeted nutrients to restore balance and wellbeing.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Crystalloid (Ringers Lactate) or Saline 100ml\n• Antifungal Broad Spectrum 200ml",
+          },
+          {
+            title: "List Symptoms",
+            text: "• Candida Overgrowth / Fungal Infections\n• Oral Thrush / Digestive Issues\n• Autoimmune Diseases / Brain Fog\n• Skin Issues / Mood Swings\n• Vaginal Infections / Carbohydrate Cravings",
+          },
+        ],
+      },
+      {
+        id: "gym-power",
+        name: "Gym Power Infusion",
+        price: "1.490.000",
+        image: "/images/gym-power.jpg",
+        desc: "Enhance your workout with a specially formulated infusion designed to elevate energy levels, improve focus, and prepare your muscles for the challenges ahead.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Saline 1000ml, Caffeine 100mg\n• Vitamin C 2000mg, B-Complex (B2, B3, B5, B6, B12)\n• Magnesium Sulfate 800mg, Calcium Gluconate 200mg\n• Carnitine 2.5ml, Aquades 12ml",
+          },
+        ],
+      },
+      {
+        id: "gym-recovery",
+        name: "Gym Recovery Infusion",
+        price: "1.490.000",
+        image: "/images/gym-recovery.jpg",
+        desc: "Speed up muscle recovery and reduce post-workout fatigue with a replenishing infusion that helps repair muscle cells and restore energy levels.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Saline 1000ml, BCAA 2gr\n• Vitamin C 2000mg, B-Complex (B2, B3, B5, B6, B12)\n• Magnesium Sulfate 800mg, Calcium Gluconate 200mg\n• Carnitine 2.5ml, Aquades 12ml",
+          },
+        ],
+      },
+      {
+        id: "jetlag-night",
+        name: "Jetlag Night Switch",
+        price: "1.490.000",
+        image: "/images/jetlag-night.jpg",
+        desc: "For travelers arriving from the West who feel wide awake at Bali bedtime. Downshifts the nervous system and supports the body's natural 'sleep gate'.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Saline 500-750 ml, Anti-nausea 4 mg\n• Magnesium 500-1.000 mg, Vitamin B6 5-10 mg\n• Oral Circadian Reset Pack (Magnesium glycinate, Melatonin, Glycine, L-theanine)",
+          },
+        ],
+      },
+      {
+        id: "jetlag-day",
+        name: "Jetlag Day Anchor",
+        price: "2.690.000",
+        image: "/images/jetlag-day.jpg",
+        desc: "For travelers who feel sleepy too early in the afternoon then wake up at 2-4am. Builds a strong 'day signal' and improves sleep consolidation.",
+        benefits: [
+          {
+            title: "Composition",
+            text: "• Crystalloid / Saline 750-1.000 ml\n• NAD+ 250 mg, Vitamin C 1-2 g\n• Magnesium 500-1.000 mg, Vitamin B support\n• Oral Pack (Magnesium glycinate, Melatonin)",
+          },
+        ],
+      },
     ],
   },
 ];

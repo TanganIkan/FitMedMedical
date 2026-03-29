@@ -2,8 +2,9 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, Variants } from "framer-motion";
-import { ChevronRight, ArrowLeft } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import { servicesData } from "../lib/services-data";
 
@@ -58,11 +59,11 @@ function TiltCard({ children }: { children: React.ReactNode }) {
 
 export default function ServicesExplorer() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const router = useRouter();
 
   return (
     <section id="services-explorer" className="py-24 overflow-hidden min-h-[850px] relative">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* HEADER */}
         <div className="text-center mb-24">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -81,8 +82,6 @@ export default function ServicesExplorer() {
           {!selectedCategory ? (
             <motion.div key="grid" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: 20 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {servicesData.map((cat, index) => {
-                // --- PERBAIKAN DI SINI ---
-                // Simpan icon ke variabel CapitalCase supaya React bisa ngerender sebagai komponen
                 const IconComponent = cat.icon;
 
                 return (
@@ -95,7 +94,6 @@ export default function ServicesExplorer() {
                       style={{ transform: "translateZ(50px)" }}
                     >
                       <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-slate-100 text-blue-600 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
-                        {/* Panggil variabel IconComponent di sini */}
                         <IconComponent size={32} strokeWidth={2} />
                       </div>
 
@@ -103,10 +101,16 @@ export default function ServicesExplorer() {
 
                       <motion.div variants={containerVariants} initial="hidden" animate="visible" className="w-full space-y-2.5 mb-10">
                         {cat.subServices.slice(0, 5).map((sub, i) => (
-                          <motion.div key={i} variants={itemVariants} className="flex items-center gap-2.5 bg-blue-600 text-white p-3.5 rounded-2xl text-[9px] font-black uppercase tracking-[0.15em] shadow-lg shadow-blue-600/10">
-                            <ChevronRight size={12} strokeWidth={3} className="opacity-70" />
-                            <span className="truncate">{sub.name}</span>
-                          </motion.div>
+                          <Link key={i} href={`/services/${cat.id}/${sub.id}`} className="block">
+                            <motion.div
+                              variants={itemVariants}
+                              whileHover={{ x: 5 }}
+                              className="flex items-center gap-2.5 bg-blue-700/5 hover:text-white text-slate-500 p-3.5 rounded-2xl text-[9px] font-black uppercase tracking-[0.15em] cursor-pointer hover:bg-blue-700 transition-colors"
+                            >
+                              <ChevronRight size={12} strokeWidth={3} className="opacity-70" />
+                              <span className="truncate">{sub.name}</span>
+                            </motion.div>
+                          </Link>
                         ))}
                       </motion.div>
 

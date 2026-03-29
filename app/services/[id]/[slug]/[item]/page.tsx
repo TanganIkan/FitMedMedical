@@ -20,7 +20,7 @@ interface LabItem {
   price: string;
   desc: string;
   image: string;
-  benefits?: Benefit[]; // Tanda ? berarti boleh ada, boleh tidak
+  benefits?: Benefit[];
 }
 
 export default function ItemDetailPage() {
@@ -71,7 +71,7 @@ export default function ItemDetailPage() {
                   {item.name}
                   <span className="text-blue-600">.</span>
                 </h1>
-                <p className="text-slate-500 text-lg font-bold leading-relaxed italic">&quot;{item.desc}&quot;</p>
+                <p className="text-slate-500 text-lg leading-relaxed italic">&quot;{item.desc}&quot;</p>
               </div>
 
               {item.benefits && item.benefits.length > 0 && (
@@ -103,7 +103,7 @@ export default function ItemDetailPage() {
                   <span className="text-[10px] font-black uppercase text-blue-700 tracking-widest leading-none">
                     Fast Results
                     <br />
-                    24-48 Hours
+                    24-48
                   </span>
                 </div>
                 <div className="p-5 rounded-3xl bg-emerald-50/50 border border-emerald-100 flex items-center gap-3">
@@ -116,7 +116,7 @@ export default function ItemDetailPage() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex flex-col gap-8">
+              <div className="relative z-10 flex flex-col gap-2">
                 <div className="flex justify-between items-end"></div>
 
                 <a

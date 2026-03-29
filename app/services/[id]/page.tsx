@@ -4,19 +4,23 @@ import { useParams } from "next/navigation";
 import { servicesData } from "../../lib/services-data";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowLeft, ChevronRight, Phone } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+
+
+import Testimoni from "../../components/Testimoni";
+import Maps from "../../components/Maps";
+
 export default function ServiceCategoryPage() {
   const params = useParams();
-
-  // Mengambil data kategori berdasarkan ID di URL
   const category = servicesData.find((c) => c.id === params.id);
 
-  // Jika ID tidak ditemukan di data
   if (!category) {
     return (
-      <div className="h-screen flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-black italic uppercase">Service Not Found</h1>
-        <Link href="/" className="mt-4 text-blue-600 font-bold underline">
+      <div className="h-screen flex flex-col items-center justify-center text-center px-6">
+        <h1 className="text-2xl md:text-4xl font-black italic uppercase text-slate-900">
+          Service Not Found<span className="text-blue-600">.</span>
+        </h1>
+        <Link href="/" className="mt-6 px-8 py-4 bg-blue-600 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-slate-900 transition-all active:scale-95 shadow-xl shadow-blue-200">
           Back to Home
         </Link>
       </div>
@@ -24,8 +28,8 @@ export default function ServiceCategoryPage() {
   }
 
   return (
-    <main className="min-h-screen">
-      <section className="pt-40 pb-20 px-6">
+    <main className="min-h-screen bg-white">
+      <section className="pt-40 pb-32 px-6">
         <div className="max-w-7xl mx-auto">
           <Link href="/" className="inline-flex items-center gap-2 text-slate-400 font-black text-[10px] uppercase tracking-[0.2em] mb-12 hover:text-blue-600 transition-colors group">
             <ArrowLeft size={16} strokeWidth={3} className="group-hover:-translate-x-1 transition-transform" />
@@ -37,7 +41,7 @@ export default function ServiceCategoryPage() {
               {category.title}
               <span className="text-blue-600">.</span>
             </motion.h1>
-            <p className="mt-8 text-slate-500 font-bold text-lg max-w-xl">Explore our specialized {category.title} services, delivered by certified professionals directly to your location in Bali.</p>
+            <p className="mt-8 text-slate-500 font-bold text-lg max-w-xl italic">Explore our specialized {category.title} services, delivered by certified professionals directly to your location in Bali.</p>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -53,30 +57,31 @@ export default function ServiceCategoryPage() {
                   <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
 
-                <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight italic uppercase leading-tight">{service.name}</h3>
+                <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight italic leading-tight uppercase">{service.name}</h3>
 
-                <p className="text-slate-500 text-sm font-bold leading-relaxed mb-10 flex-grow">{service.desc}</p>
+                <p className="text-slate-500 text-sm font-medium leading-relaxed mb-10 flex-grow">{service.desc}</p>
 
-                <div className=" border-slate-100 flex flex-col gap-6">
+                <div className="flex flex-col gap-6">
                   <div className="flex justify-between items-end">
-                    {params.id !== "lab" && <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Price Starts From</div>}
-                    {params.id !== "lab" && <div className="text-xl font-black text-blue-600 tracking-tighter">Rp {service.price}</div>}
+                    {params.id !== "lab" && <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-300">Price Starts From</div>}
+                    {params.id !== "lab" && <div className="text-xl font-black text-blue-600 tracking-tighter italic">Rp {service.price}</div>}
                   </div>
 
-                  <div className="flex gap-3">
-                    <Link
-                      href={`/services/${params.id}/${service.id}`}
-                      className="flex-1 border-2 border-slate-100 text-slate-400 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-slate-50 hover:text-blue-600 transition-all text-center flex items-center justify-center"
-                    >
-                      See Detail
-                    </Link>
-                  </div>
+                  <Link
+                    href={`/services/${params.id}/${service.id}`}
+                    className="w-full py-5 bg-slate-900 text-white rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-blue-600 transition-all text-center flex items-center justify-center shadow-lg shadow-slate-200"
+                  >
+                    See Detail & Benefits
+                  </Link>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      <Testimoni />
+      <Maps />
     </main>
   );
 }

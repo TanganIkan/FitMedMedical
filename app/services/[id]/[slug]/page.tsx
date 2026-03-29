@@ -29,9 +29,6 @@ export default function ServiceDetailPage() {
     );
   }
 
-  // ================================================================
-  // KONDISI 1: TAMPILAN KHUSUS LAB (LEVEL 2: DAFTAR ITEM TES)
-  // ================================================================
   if (params.id === "lab" && "items" in service) {
     return (
       <main className="bg-white min-h-screen pt-40 pb-24 px-6 text-left">
@@ -62,7 +59,7 @@ export default function ServiceDetailPage() {
                 </div>
 
                 <h3 className="font-black text-slate-900 text-lg mb-2 uppercase italic leading-tight tracking-tight">{item.name}</h3>
-                <p className="text-slate-500 text-[11px] font-bold mb-8 flex-grow leading-relaxed italic line-clamp-3">{item.desc}</p>
+                <p className="text-slate-500 text-[11px] mb-8 flex-grow leading-relaxed italic line-clamp-3">{item.desc}</p>
 
                 <div className="space-y-3">
                   <a
@@ -110,14 +107,13 @@ export default function ServiceDetailPage() {
 
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="lg:col-span-5 flex flex-col gap-12">
               <div>
-                <h1 className="text-4xl lg:text-7xl font-black text-slate-950 tracking-tighter italic uppercase leading-[0.8] mb-8">
+                <h1 className="text-4xl lg:text-7xl font-black text-slate-950 tracking-tighter italic leading-[0.8] mb-8">
                   {service.name}
                   <span className="text-blue-600">.</span>
                 </h1>
-                <p className="text-slate-500 text-lg font-bold italic leading-relaxed">&quot;{service.desc}&quot;</p>
+                <p className="text-slate-500 text-lg italic leading-relaxed">&quot;{service.desc}&quot;</p>
               </div>
 
-              {/* Tanda Tanya ? agar aman jika benefits tidak ada */}
               {"benefits" in service && service.benefits && service.benefits.length > 0 && (
                 <div className="space-y-8">
                   <div className="flex items-center gap-4">
@@ -134,7 +130,7 @@ export default function ServiceDetailPage() {
                         <div className="text-left">
                           {" "}
                           <p className="font-black text-slate-900 uppercase italic text-sm mb-1">{benefit.title}</p>
-                          <p className="text-slate-500 text-[13px] font-semibold leading-relaxed">{benefit.text}</p>
+                          <p className="text-slate-500 text-[13px] font-semibold leading-relaxed whitespace-pre-line">{benefit.text}</p>
                         </div>
                       </motion.div>
                     ))}
@@ -225,7 +221,7 @@ export default function ServiceDetailPage() {
                       <h3 className="text-3xl font-black leading-none mb-3 tracking-tighter italic uppercase">{item.name}</h3>
                       <Link
                         href={`/services/${params.id}/${item.id}`}
-                        className="w-full py-4.5 bg-white text-blue-600 rounded-2xl font-black text-[15px] text-center hover:bg-slate-950 hover:text-white transition-all uppercase tracking-widest"
+                        className="w-full py-4.5 bg-slate-900 text-white rounded-2xl font-black text-[15px] text-center hover:bg-blue-600 hover:text-white uppercase  transition-all text-center flex items-center justify-center shadow-lg"
                       >
                         See Detail
                       </Link>

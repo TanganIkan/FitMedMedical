@@ -28,7 +28,7 @@ export default function Hero() {
       icon: HeartPlus,
       title: "Immediate Assistance",
       desc: "Fast medical intervention when you need it most, ensuring peace of mind.",
-      color: "bg-rose-100 text-rose-700",
+      color: "bg-red-100 text-red-700",
     },
   ];
 
@@ -42,7 +42,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          <div className="lg:col-span-6 flex flex-col justify-center z-20">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -75,11 +75,16 @@ export default function Hero() {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className="mt-12 flex flex-wrap gap-4 items-center">
               <Link
-                href="#booking"
-                className="inline-flex items-center gap-2.5 px-8 py-4 border border-transparent text-base font-bold rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 transition-all transform hover:scale-105 active:scale-95 group"
+                href="https://wa.me/6281234567890"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-blue-600 text-white font-black text-xs uppercase tracking-[0.2em] rounded-full hover:bg-slate-900 transition-all duration-500 transform hover:scale-105 active:scale-95 shadow-2xl shadow-slate-900/20 group italic"
               >
-                <Phone className="w-5 h-5 group-hover:animate-bounce" />
-                Free Consultation →
+                <div className="relative">
+                  <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-500" />
+                  <span className="absolute -top-1 -right-1 w-2 h-2 bg-emerald-500 animate-pulse rounded-full group-hover:border-blue-600 transition-colors" />
+                </div>
+
+                <span>Free Consultation</span>
+                <span className="transform group-hover:translate-x-1 transition-transform duration-500">→</span>
               </Link>
               <div className="flex items-center gap-2 text-slate-500 text-sm">
                 <CheckCircle2 className="w-5 h-5 text-emerald-500" />
@@ -88,20 +93,34 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.8, rotate: 2 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="mt-16 lg:mt-0 lg:col-span-5 relative z-20">
-            <div className="relative mx-auto w-full max-w-sm lg:max-w-none rounded-[32px] overflow-hidden shadow-[0_32px_80px_rgb(0,0,0,0.15)] border-8 border-white group">
-              <img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000"
-                alt="Tim Medis Trishnanda"
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
+          <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="mt-16 lg:mt-0 lg:col-span-6 relative z-10 flex items-center justify-center">
+            <div className="relative w-full max-w-none group">
+              <div
+                className="relative"
+                style={{
+                  maskImage: "linear-gradient(to bottom, black 70%, transparent 98%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 98%)",
+                }}
+              >
+                <img src="/images/hero.png" alt="Tim Medis FIT MED MEDICAL" className="w-full h-auto object-contain transform scale-[1.0] origin-bottom transition-transform duration-1000 hover:scale-[1.03]" />
+              </div>
 
-            <motion.div
-              animate={{ rotate: [-12, -8, -12], scale: [1, 1.05, 1] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-10 -left-10 w-24 h-24 bg-blue-100 rounded-3xl -rotate-12 z-[-1]"
-            />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] bg-blue-400/10 rounded-full blur-[130px] -z-10 pointer-events-none" />
+
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -bottom-6 -right-4 bg-white/90 backdrop-blur-md p-5 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-blue-50 hidden md:flex items-center gap-4 z-30"
+              >
+                <div className="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-200">
+                  <CheckCircle2 size={24} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 leading-none mb-1">Verified</p>
+                  <p className="text-lg font-black text-slate-900 italic">Licensed Doctors</p>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
 
