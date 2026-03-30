@@ -16,30 +16,45 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-20">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2 mb-8">
-              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl italic shadow-lg shadow-blue-600/20">T</div>
+              {/* UPDATE LOGO BRAND */}
+              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl italic shadow-lg shadow-blue-600/20 text-white">F</div>
               <span className="text-2xl font-black tracking-tighter uppercase italic">
-                Trishnanda <span className="text-blue-500">Care</span>
+                Fit Med <span className="text-blue-500">Medical</span>
               </span>
             </div>
-            <p className="text-slate-400 leading-relaxed max-w-sm mb-8 font-medium">Providing premium medical services directly to your doorstep in Bali. Certified professionals, trusted healthcare, 24/7.</p>
+            <p className="text-slate-400 leading-relaxed max-w-sm mb-8 font-medium italic">Providing premium medical services directly to your doorstep in Bali. Certified professionals, trusted healthcare, 24/7.</p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+              >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+              </Link>
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+              >
                 <Linkedin className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500">Navigation</h4>
+            <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500 italic">Navigation</h4>
             <ul className="space-y-4">
-              {["Home", "Services", "Team", "Blog"].map((item) => (
-                <li key={item}>
-                  <Link href={`#${item.toLowerCase()}`} className="text-slate-400 hover:text-white transition-colors font-bold text-sm flex items-center gap-2 group">
+              {/* UPDATE LINK NAVIGATION SESUAI NAVBAR */}
+              {[
+                { name: "Home", href: "/" },
+                { name: "Doctors", href: "/doctor" },
+                { name: "Journal", href: "/blog" },
+                { name: "About Us", href: "/about" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-slate-400 hover:text-white transition-colors font-bold text-sm flex items-center gap-2 group italic uppercase tracking-wider">
                     <span className="w-0 h-[2px] bg-blue-500 transition-all group-hover:w-3"></span>
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -47,10 +62,10 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500">Medical Services</h4>
+            <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500 italic">Medical Services</h4>
             <ul className="space-y-4">
-              {["Vaccinations", "IV Vitamin Therapy", "Medical Tests", "Doctor Visit"].map((item) => (
-                <li key={item} className="text-slate-400 font-bold text-sm cursor-default flex items-center gap-2">
+              {["IV Drip Therapy", "Home Care Service", "Lab Medical Test", "Doctor Consultation"].map((item) => (
+                <li key={item} className="text-slate-400 font-bold text-sm cursor-default flex items-center gap-2 italic uppercase tracking-wider">
                   <div className="w-1 h-1 bg-slate-700 rounded-full"></div>
                   {item}
                 </li>
@@ -59,23 +74,23 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500">Contact Us</h4>
+            <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500 italic">Contact Us</h4>
             <div className="space-y-6">
               <div className="flex gap-4 group">
                 <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-lg">
                   <Phone className="w-5 h-5" />
                 </div>
-                <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">WhatsApp 24/7</p>
-                  <p className="text-sm font-bold text-slate-200">+62 812 3456 7890</p>
-                </div>
+                <Link href="https://wa.me/6281935250752" target="_blank">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1 italic">WhatsApp 24/7</p>
+                  <p className="text-sm font-bold text-slate-200">+62 819 3525 0752</p>
+                </Link>
               </div>
               <div className="flex gap-4">
                 <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-500 shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">Our Base</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1 italic">Our Base</p>
                   <p className="text-sm font-bold text-slate-200">Denpasar, Bali, Indonesia</p>
                 </div>
               </div>
@@ -84,12 +99,12 @@ export default function Footer() {
         </div>
 
         <div className="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">© {currentYear} Trishnanda Care Centre. Built with ❤️ in Bali.</p>
+          <p className="text-slate-500 text-xs font-bold uppercase tracking-widest italic">© {currentYear} Fit Med Medical Centre. Built with ❤️ in Bali.</p>
           <div className="flex gap-8">
-            <Link href="#" className="text-slate-500 hover:text-blue-500 text-[10px] font-black uppercase tracking-widest transition-colors">
+            <Link href="#" className="text-slate-500 hover:text-blue-500 text-[10px] font-black uppercase tracking-widest transition-colors italic">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-slate-500 hover:text-blue-500 text-[10px] font-black uppercase tracking-widest transition-colors">
+            <Link href="#" className="text-slate-500 hover:text-blue-500 text-[10px] font-black uppercase tracking-widest transition-colors italic">
               Terms of Service
             </Link>
           </div>

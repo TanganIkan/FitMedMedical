@@ -36,11 +36,9 @@ export default function DoctorPage() {
           </div>
 
           <div className="flex bg-white p-2 rounded-[32px] shadow-xl shadow-slate-900/5 border border-slate-100 relative">
-            {/* 4. Casting array sebagai FilterType[] agar 'type' dikenali dengan benar */}
             {(["all", "doctor", "nurse"] as FilterType[]).map((type) => (
               <button
                 key={type}
-                // 5. 'any' sudah dibuang, sekarang 'type' sudah valid
                 onClick={() => setFilter(type)}
                 className={`relative px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest transition-colors z-10 ${filter === type ? "text-white" : "text-slate-400 hover:text-slate-950"}`}
               >
@@ -51,7 +49,6 @@ export default function DoctorPage() {
           </div>
         </div>
 
-        {/* ... sisa kode grid dan modal tetap sama karena sudah aman ... */}
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <AnimatePresence mode="popLayout">
             {filteredTeam.map((staff) => (
