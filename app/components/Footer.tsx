@@ -6,7 +6,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-950 text-white pt-24 pb-12 overflow-hidden relative">
-      {/* SHAPE BACKGROUND (Sudut Kanan Bawah) */}
       <div className="absolute bottom-0 right-0 w-1/3 h-1/2 opacity-[0.03] pointer-events-none">
         <svg width="100%" height="100%" viewBox="0 0 500 500" preserveAspectRatio="none">
           <path d="M500,500 L0,500 L500,0 Z" fill="currentColor" className="text-blue-500" />
@@ -15,7 +14,6 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-20">
-          {/* KOLOM 1: BRANDING */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2 mb-8">
               <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl italic shadow-lg shadow-blue-600/20">T</div>
@@ -34,7 +32,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* KOLOM 2: QUICK LINKS */}
           <div className="lg:col-span-2">
             <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500">Navigation</h4>
             <ul className="space-y-4">
@@ -49,7 +46,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* KOLOM 3: SERVICES */}
           <div className="lg:col-span-3">
             <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500">Medical Services</h4>
             <ul className="space-y-4">
@@ -62,7 +58,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* KOLOM 4: CONTACT */}
           <div className="lg:col-span-3">
             <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500">Contact Us</h4>
             <div className="space-y-6">
@@ -88,7 +83,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* BOTTOM BAR */}
         <div className="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">© {currentYear} Trishnanda Care Centre. Built with ❤️ in Bali.</p>
           <div className="flex gap-8">

@@ -4,23 +4,23 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, GraduationCap, Award, Briefcase, Verified, Phone, Stethoscope, Heart, Instagram, Linkedin } from "lucide-react";
 
-// IMPORT DATA DARI FILE EXTERNAL
 import { teamData } from "../lib/team-data";
 
-export default function DoctorPage() {
-  const [filter, setFilter] = useState<"all" | "doctor" | "nurse">("all");
-  const [selectedStaff, setSelectedStaff] = useState<(typeof teamData)[0] | null>(null);
+type FilterType = "all" | "doctor" | "nurse";
 
-  // LOGIC FILTER
+type StaffMember = (typeof teamData)[0];
+
+export default function DoctorPage() {
+  const [filter, setFilter] = useState<FilterType>("all");
+  const [selectedStaff, setSelectedStaff] = useState<StaffMember | null>(null);
+
   const filteredTeam = filter === "all" ? teamData : teamData.filter((t) => t.type === filter);
 
   return (
     <section className="py-40 bg-slate-50 min-h-screen relative overflow-hidden">
-      {/* BACKGROUND DECOR */}
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-blue-100/20 blur-[120px] rounded-full -z-10" />
 
       <div className="max-w-7xl mx-auto px-6">
-        {/* HEADER SECTION */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20">
           <div className="max-w-2xl">
             <motion.div
@@ -35,12 +35,13 @@ export default function DoctorPage() {
             </h1>
           </div>
 
-          {/* FILTER TOGGLE */}
-          <div className="flex xbg-white p-2 rounded-[32px] shadow-xl shadow-slate-900/5 border border-slate-100 relative">
-            {["all", "doctor", "nurse"].map((type) => (
+          <div className="flex bg-white p-2 rounded-[32px] shadow-xl shadow-slate-900/5 border border-slate-100 relative">
+            {/* 4. Casting array sebagai FilterType[] agar 'type' dikenali dengan benar */}
+            {(["all", "doctor", "nurse"] as FilterType[]).map((type) => (
               <button
                 key={type}
-                onClick={() => setFilter(type as any)}
+                // 5. 'any' sudah dibuang, sekarang 'type' sudah valid
+                onClick={() => setFilter(type)}
                 className={`relative px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest transition-colors z-10 ${filter === type ? "text-white" : "text-slate-400 hover:text-slate-950"}`}
               >
                 {filter === type && <motion.div layoutId="activeFilter" className="absolute inset-0 bg-slate-950 rounded-full -z-10" transition={{ type: "spring", stiffness: 300, damping: 30 }} />}
@@ -50,7 +51,7 @@ export default function DoctorPage() {
           </div>
         </div>
 
-        {/* TEAM GRID */}
+        {/* ... sisa kode grid dan modal tetap sama karena sudah aman ... */}
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <AnimatePresence mode="popLayout">
             {filteredTeam.map((staff) => (
@@ -77,7 +78,6 @@ export default function DoctorPage() {
           </AnimatePresence>
         </motion.div>
 
-        {/* DETAIL MODAL */}
         <AnimatePresence>
           {selectedStaff && (
             <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
@@ -93,7 +93,6 @@ export default function DoctorPage() {
                   <X size={20} />
                 </button>
 
-                {/* LEFT SIDE: PHOTO CARD */}
                 <div className="w-full md:w-[42%] p-10 md:p-14 bg-slate-50 flex flex-col items-center justify-center border-r border-slate-100">
                   <div className="w-full aspect-square rounded-[48px] overflow-hidden border-[12px] border-white shadow-2xl mb-8 relative">
                     <img src={selectedStaff.image} alt={selectedStaff.name} className="w-full h-full object-cover" />
@@ -105,7 +104,6 @@ export default function DoctorPage() {
                   <div className="px-5 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] italic border border-blue-100">License: {selectedStaff.str}</div>
                 </div>
 
-                {/* RIGHT SIDE: INFO DASHBOARD */}
                 <div className="w-full md:w-[58%] p-10 md:p-14 flex flex-col justify-between bg-white">
                   <div className="space-y-12">
                     <div className="grid grid-cols-2 gap-10">

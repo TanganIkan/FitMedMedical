@@ -42,8 +42,8 @@ export default function Navbar() {
   ];
 
   const otherLinks = [
-    { name: "Doctors & Nurses", href: "/doctor" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Doctors", href: "/doctor" },
+    { name: "Journal", href: "/blog" },
   ];
 
   return (
@@ -111,7 +111,11 @@ export default function Navbar() {
 
             {otherLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="px-4 py-2 text-[13px] font-bold text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all rounded-full uppercase tracking-wide">
+                <Link
+                  href={link.href}
+                  className={`px-4 py-2 text-[13px] font-bold transition-all rounded-full flex items-center gap-2 uppercase tracking-wide
+                    ${pathname.startsWith(link.href) ? "text-blue-600 bg-blue-50/50" : "text-slate-500 hover:text-blue-600 hover:bg-slate-50"}`}
+                >
                   {link.name}
                 </Link>
               </li>
