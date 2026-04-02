@@ -10,7 +10,7 @@ export const servicesData = [
         id: "doctor-home-service",
         name: "Doctor Home Service",
         price: "500.000",
-        image: "/images/home-service.webp",
+        image: "/images/doctor-consultation/doctor-home-service.webp",
         desc: "Professional doctor home visit service providing medical consultation, diagnosis, treatment, and follow-up care directly at your home.",
         benefits: [
           { title: "Convenience", text: "Consult a healthcare professional from the comfort of your home, saving time and travel." },
@@ -22,7 +22,7 @@ export const servicesData = [
         id: "gp-online",
         name: "General Practitioner Online",
         price: "20.000",
-        image: "/images/doctor-online.webp",
+        image: "/images/doctor-consultation/general-practitioner-online.webp",
         desc: "Access healthcare through convenient online consultations, addressing diagnoses, treatments, and follow-up care flexibly from your own space.",
         benefits: [
           { title: "Convenience", text: "Consult a healthcare professional from the comfort of your home, saving time and travel." },
@@ -36,7 +36,7 @@ export const servicesData = [
         name: "Medical Doctor Online Consultation",
         price: "40.000",
         desc: "Connect with specialized medical expertise remotely, eliminating the need for physical travel through our online platform.",
-        image: "/images/consultation.webp",
+        image: "/images/doctor-consultation/medical-doctor-online-consultation.webp",
         benefits: [
           { title: "Pediatrician", text: "Consult with doctor specializing in the medical care of infants, children, and adolescents." },
           { title: "Surgeon", text: "Consult with medical professional skilled in performing surgical procedures." },
@@ -48,7 +48,7 @@ export const servicesData = [
         name: "Online Medical Prescription",
         price: "20.000",
         desc: "Online medical prescriptions allow patients to receive medications remotely through secure virtual consultations.",
-        image: "/images/medical-prescription.webp",
+        image: "/images/doctor-consultation/online-medical-prescription.webp",
         benefits: [
           { title: "Convenience", text: "Receive prescriptions without visiting a physical clinic, saving time and effort." },
           { title: "Accessibility", text: "Improves access to medications for patients in remote areas." },
@@ -62,7 +62,7 @@ export const servicesData = [
         name: "Online Sick Leave Letter",
         price: "75.000",
         desc: "Online sick leave letters allow individuals to consult healthcare professionals remotely and obtain medical certificates through digital platforms.",
-        image: "/images/online-sick.webp",
+        image: "/images/doctor-consultation/online-sick-leave-letter.webp",
         benefits: [
           { title: "Convenience", text: "Receive prescriptions without visiting a physical clinic, saving time and effort." },
           { title: "Accessibility", text: "Easy access for individuals in remote areas or with limited mobility." },
@@ -82,7 +82,7 @@ export const servicesData = [
         id: "general-health-checkup",
         name: "General Health Checkup",
         price: "850.000",
-        image: "/images/lab-general.jpg",
+        image: "/images/home-lab-service/general.webp",
         desc: "Comprehensive health screening to assess overall wellness and detect early signs of medical conditions.",
         items: [
           {
@@ -90,7 +90,7 @@ export const servicesData = [
             name: "Complete Blood Count (CBC)",
             price: "150.000",
             desc: "Measures overall blood health, including infection, anemia, and immune status.",
-            image: "/images/lab-cbc.jpg",
+            image: "/images/general-health/Complete-Blood-Count-(CBC).webp",
             benefits: [
               {
                 title: "Measure",
@@ -107,7 +107,7 @@ export const servicesData = [
             name: "Liver Function Test (LFT)",
             price: "200.000",
             desc: "Evaluates liver health and detects inflammation or liver damage.",
-            image: "/images/lab-lft.jpg",
+            image: "/images/general-health/Liver-Function-Test-(LFT).webp",
             benefits: [
               {
                 title: "Measure",
@@ -124,7 +124,7 @@ export const servicesData = [
             name: "Kidney Function Test (KFT)",
             price: "200.000",
             desc: "Assesses kidney performance and detects early kidney problems.",
-            image: "/images/lab-kft.jpg",
+            image: "/images/general-health/Kidney-Function-Test-(KFT).webp",
             benefits: [
               {
                 title: "Measure",
@@ -141,7 +141,7 @@ export const servicesData = [
             name: "Lipid Profile",
             price: "250.000",
             desc: "Checks cholesterol and triglyceride levels to assess heart disease risk.",
-            image: "/images/lab-lipid.jpg",
+            image: "/images/general-health/Lipid-Profile.webp",
             benefits: [
               {
                 title: "Measure",
@@ -158,7 +158,7 @@ export const servicesData = [
             name: "Blood Glucose (HbA1c)",
             price: "175.000",
             desc: "Monitors blood sugar levels and long-term glucose control.",
-            image: "/images/lab-hba1c.jpg",
+            image: "/images/general-health/Blood-Glucose-(HbA1c).webp",
             benefits: [
               {
                 title: "Measure",
@@ -175,7 +175,7 @@ export const servicesData = [
             name: "Urinalysis",
             price: "125.000",
             desc: "Detects urinary tract infections, kidney issues, and metabolic disorders.",
-            image: "/images/lab-urinalysis.jpg",
+            image: "/images/general-health/Urinalysis.webp",
             benefits: [
               {
                 title: "Measure",
@@ -192,7 +192,7 @@ export const servicesData = [
             name: "Electrolyte Panel",
             price: "185.000",
             desc: "Measures essential minerals to maintain fluid balance and nerve function.",
-            image: "/images/lab-electrolyte.jpg",
+            image: "/images/general-health/Electrolyte-Panel.webp",
             benefits: [
               {
                 title: "Measure",
@@ -209,7 +209,7 @@ export const servicesData = [
             name: "C-Reactive Protein (CRP)",
             price: "195.000",
             desc: "Identifies inflammation and infection levels in the body.",
-            image: "/images/lab-crp.jpg",
+            image: "/images/general-health/C-Reactive-Protein-(CRP).webp",
             benefits: [
               {
                 title: "Measure",
@@ -227,7 +227,7 @@ export const servicesData = [
         id: "infectious-disease-tests",
         name: "Infectious Disease Tests",
         price: "450.000",
-        image: "/images/lab-infectious.jpg",
+        image: "/images/home-lab-service/infectious.webp",
         desc: "Laboratory tests to identify bacterial, viral, and infectious diseases accurately and quickly.",
         items: [
           {
@@ -235,7 +235,7 @@ export const servicesData = [
             name: "COVID-19 PCR/Antigen",
             price: "250.000",
             desc: "Accurate testing to detect active COVID-19 infection for early diagnosis and safe travel or work clearance.",
-            image: "/images/lab-covid.jpg",
+            image: "/images/Infectious/COVID-19-PCR-Antigen.webp",
             benefits: [
               {
                 title: "Benefit",
@@ -248,7 +248,7 @@ export const servicesData = [
             name: "Dengue Fever Test",
             price: "450.000",
             desc: "Blood test to detect dengue infection early and help prevent severe complications.",
-            image: "/images/lab-dengue.jpg",
+            image: "/images/Infectious/Dengue-Fever-Tes.webp",
             benefits: [
               {
                 title: "Benefit",
@@ -261,7 +261,7 @@ export const servicesData = [
             name: "Malaria Test",
             price: "350.000",
             desc: "Rapid diagnostic test to identify malaria infection and guide timely treatment.",
-            image: "/images/lab-malaria.jpg",
+            image: "/images/Infectious/malaria-test.webp",
             benefits: [
               {
                 title: "Benefit",
@@ -274,7 +274,7 @@ export const servicesData = [
             name: "Typhoid Fever Test",
             price: "350.000",
             desc: "Laboratory test to diagnose typhoid fever and support proper medical treatment.",
-            image: "/images/lab-typhoid.jpg",
+            image: "/images/Infectious/typhoid-fever-test.webp",
             benefits: [
               {
                 title: "Benefit",
@@ -287,7 +287,7 @@ export const servicesData = [
             name: "STI Panel",
             price: "850.000",
             desc: "Comprehensive screening to detect sexually transmitted infections accurately and confidentially.",
-            image: "/images/lab-sti.jpg",
+            image: "/images/Infectious/STI-Panel.webp",
             benefits: [
               {
                 title: "Benefit",
@@ -297,30 +297,160 @@ export const servicesData = [
           },
         ],
       },
-      { id: "hormone-specialised-tests", name: "Hormone & Specialised Tests", price: "1.200.000", image: "/images/lab-hormone.jpg", desc: "Advanced testing to evaluate hormone balance and diagnose specific medical conditions.", items: [] },
+      {
+        id: "hormone-specialised-tests",
+        name: "Hormone & Specialised Tests",
+        image: "/images/home-lab-service/hormone.webp",
+        desc: "Advanced testing to evaluate hormone balance and diagnose specific medical conditions.",
+        items: [
+          {
+            id: "hormone-specialised-test",
+            name: "Hormone Specialised Test",
+            image: "/images/hormone-specialised-test/hormone.webp",
+            desc: "Advanced laboratory tests to evaluate hormone balance and detect specific health conditions accurately.",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Accurate evaluation of hormone levels\n• Early detection of hormonal imbalances and related conditions\n• Supports diagnosis of reproductive and metabolic disorders\n• Personalized treatment planning based on precise results\n• Reliable and confidential laboratory testing process",
+              },
+            ],
+          },
+          {
+            id: "thyroid-function-test",
+            name: "Thyroid Function Test (TSH, T3, T4)",
+            image: "/images/hormone-specialised-test/thyroid.webp",
+            desc: "Blood test to assess thyroid hormone levels and identify hypo- or hyperthyroid conditions.",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Accurate measurement of TSH, T3, and T4 hormone levels\n• Early detection of thyroid disorders\n• Helps diagnose symptoms like fatigue, weight changes, and mood disturbances\n• Supports monitoring of ongoing thyroid treatment\n• Reliable laboratory results for proper medical management",
+              },
+            ],
+          },
+          {
+            id: "hormone-panel",
+            name: "Hormone Panel (Including Testosterone)",
+            image: "/images/hormone-specialised-test/hormone-panel.webp",
+            desc: "Comprehensive hormone screening to evaluate metabolic health, energy, and hormonal balance.",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Comprehensive assessment of hormone levels, including testosterone\n• Helps identify hormonal imbalances affecting energy and performance\n• Supports evaluation of metabolic and reproductive health\n• Assists in diagnosing symptoms such as fatigue, low libido, or mood changes\n• Enables personalized treatment and hormone management plans",
+              },
+            ],
+          },
+          {
+            id: "psa-test",
+            name: "Prostate Specific Antigen (PSA)",
+            image: "/images/hormone-specialised-test/psa.webp",
+            desc: "Screening test to assess prostate health and support early detection of prostate conditions.",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Early screening for prostate-related conditions\n• Helps detect potential abnormalities before symptoms appear\n• Supports monitoring of prostate health over time\n• Simple and quick blood test procedure\n• Reliable laboratory results for timely medical decisions",
+              },
+            ],
+          },
+          {
+            id: "pregnancy-test",
+            name: "Pregnancy Test (hCG)",
+            image: "/images/hormone-specialised-test/pregnancy-test.webp",
+            desc: "Reliable blood test to confirm pregnancy by detecting human chorionic gonadotropin (hCG).",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Early and accurate pregnancy confirmation\n• Detects hCG levels in the bloodstream\n• More sensitive than standard urine tests\n• Supports early prenatal care planning\n• Reliable laboratory results with quick turnaround time",
+              },
+            ],
+          },
+        ],
+      },
       {
         id: "nutritional-vitamin-tests",
         name: "Nutritional & Vitamin Tests",
-        price: "950.000",
-        image: "/images/lab-nutritional.jpg",
+
+        image: "/images/home-lab-service/nutrition.webp",
         desc: "Blood tests to measure vitamin and nutrient levels affecting energy, immunity, and metabolism.",
-        items: [],
+        items: [
+          {
+            id: "vitamin-d-test",
+            name: "Vitamin D Test",
+            image: "/images/Nutritional-Vitamin/vit-d.webp",
+            desc: "Measures Vitamin D levels to support bone health, immune function, and overall wellness.",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Accurate assessment of Vitamin D levels\n• Supports bone health and calcium absorption\n• Helps identify deficiencies related to immune function\n• Guides proper Vitamin D supplementation\n• Reliable results for monitoring long-term health",
+              },
+            ],
+          },
+          {
+            id: "vitamin-b12-test",
+            name: "Vitamin B12 Test",
+            image: "/images/Nutritional-Vitamin/vit-b12.webp",
+            desc: "Checks B12 levels, essential for nerve function, red blood cell production, and energy.",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Precise measurement of Vitamin B12 levels\n• Helps diagnose causes of fatigue or neurological symptoms\n• Supports healthy red blood cell production\n• Essential for monitoring plant-based or restricted diets\n• Accurate laboratory analysis for optimal energy levels",
+              },
+            ],
+          },
+        ],
       },
       {
         id: "allergy-sensitivity-tests",
         name: "Allergy & Sensitivity Tests",
         price: "1.100.000",
-        image: "/images/lab-allergy.jpg",
+        image: "/images/home-lab-service/allergy.webp",
         desc: "Tests to identify allergic reactions and sensitivities to foods, substances, or environmental factors.",
-        items: [],
+        items: [
+          {
+            id: "allergy-test-panel",
+            name: "Allergy Test Panel",
+            image: "/images/Allergy/allergy-test.webp",
+            desc: "Comprehensive test to identify allergies triggered by food, environment, or other common allergens.",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Identifies food and environmental allergens accurately\n• Helps determine the cause of recurring allergy symptoms\n• Supports personalized allergy management plans\n• Reduces risk of severe allergic reactions\n• Reliable and confidential laboratory testing process",
+              },
+            ],
+          },
+          {
+            id: "food-intolerance-test",
+            name: "Food Intolerance Test",
+            image: "/images/Allergy/food.webp",
+            desc: "Test to detect food sensitivities that may cause digestive discomfort, fatigue, or skin reactions.",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Identifies specific food sensitivities accurately\n• Helps reduce symptoms such as bloating, fatigue, or skin irritation\n• Supports personalized dietary planning\n• Improves digestive health and overall wellness\n• Reliable and confidential laboratory testing process",
+              },
+            ],
+          },
+        ],
       },
       {
-        id: "gastrointestinal-&-metabolic-tests",
+        id: "gastrointestinal-metabolic-tests",
         name: "Gastrointestinal & Metabolic Tests",
         price: "1.100.000",
-        image: "/images/lab-allergy.jpg",
-        desc: "Tests to identify allergic reactions and sensitivities to foods, substances, or environmental factors.",
-        items: [],
+        image: "/images/home-lab-service/metabolic.webp",
+        desc: "Advanced testing to assess digestive health and identify metabolic disorders.",
+        items: [
+          {
+            id: "fecal-analysis",
+            name: "Fecal Analysis",
+            image: "/images/Metabolic/fecal-analysis.webp",
+            desc: "Stool test to assess digestive health, detect infections, parasites, and gastrointestinal disorders.",
+            benefits: [
+              {
+                title: "Benefit",
+                text: "• Detects bacterial, viral, or parasitic infections\n• Identifies signs of gastrointestinal inflammation or bleeding\n• Helps diagnose digestive disorders\n• Supports evaluation of chronic diarrhea, abdominal pain, or bloating\n• Reliable laboratory results for accurate medical management",
+              },
+            ],
+          },
+        ],
       },
     ],
   },
@@ -333,7 +463,7 @@ export const servicesData = [
         id: "wound-care",
         name: "Wound and Care",
         price: "500.000",
-        image: "/images/wound-care.jpg",
+        image: "/images/home-care-services/wound-and-care.webp",
         desc: "Comprehensive healthcare services covering expert wound and ostomy care, advanced wound dressing techniques, precise minor surgical procedures, and thorough post-surgical care to support optimal recovery.",
         benefits: [
           {
@@ -346,7 +476,7 @@ export const servicesData = [
         id: "monitoring",
         name: "Monitoring & Prevention",
         price: "200.000",
-        image: "/images/monitoring.webp",
+        image: "/images/home-care-services/monitoring-&-prevention.webp",
         desc: "Ensuring patient well-being through continuous vital sign monitoring and implementing preventive measures to reduce the risk of infections.",
         benefits: [
           {
@@ -359,7 +489,7 @@ export const servicesData = [
         id: "nurse-visit",
         name: "Nurse Home Visit",
         price: "250.000",
-        image: "/images/nurse-visit.jpg",
+        image: "/images/home-care-services/nurse-home-visit.webp",
         desc: "A Nurse Home Visit delivers professional healthcare directly to your home, providing personalized assessments, treatments, and health education.",
         benefits: [
           {
@@ -372,7 +502,7 @@ export const servicesData = [
         id: "pediatric-care",
         name: "Pediatric Home Care",
         price: "700.000",
-        image: "/images/pediatric.webp",
+        image: "/images/home-care-services/pediatric-home-care.webp",
         desc: "Pediatric home care provides specialized medical services for children directly in their homes, ensuring comfort, safety, and convenient healthcare.",
         benefits: [
           {
@@ -385,7 +515,7 @@ export const servicesData = [
         id: "ent-care",
         name: "Otolaryngology Home Care",
         price: "700.000",
-        image: "/images/ent.webp",
+        image: "/images/home-care-services/otolaryngology-home-care.webp",
         desc: "Otolaryngology home care provides specialized medical services for ear, nose, and throat conditions directly in the comfort of the patient's home.",
         benefits: [
           {
@@ -398,7 +528,7 @@ export const servicesData = [
         id: "dengue-fever",
         name: "Dengue Fever Home Care",
         price: "850.000",
-        image: "/images/dengue-homecare.jpg",
+        image: "/images/home-care-services/dengue-fever-home-care.webp",
         desc: "Dengue fever home care focuses on treating and managing dengue symptoms at home, supporting patient recovery while reducing transmission risks and hospital-related complications.",
         benefits: [
           {
@@ -418,7 +548,7 @@ export const servicesData = [
         id: "bali-belly",
         name: "Bali Belly Infusion",
         price: "1.990.000",
-        image: "/images/bali-belly.jpg",
+        image: "/images/iv-therapy-services/001.webp",
         desc: "Rapid GI reset hydration. Reduces nausea, relieves stomach cramps, and supports gut lining with electrolytes, anti-nausea agents, and essential vitamins.",
         benefits: [
           {
@@ -431,7 +561,7 @@ export const servicesData = [
         id: "super-bali-belly",
         name: "Super Bali Belly IV",
         price: "2.190.000",
-        image: "/images/super-bali-belly.jpg",
+        image: "/images/iv-therapy-services/002.webp",
         desc: "Advanced gut recovery & immunity boost. Enhances digestive relief with electrolytes, zinc, probiotics, and vitamins-protects gut barrier while strengthening your immune system.",
         benefits: [
           {
@@ -444,7 +574,7 @@ export const servicesData = [
         id: "nad-plus",
         name: "Pure NAD+ Anti Aging",
         price: "2.390.000",
-        image: "/images/nad-plus.jpg",
+        image: "/images/iv-therapy-services/003.webp",
         desc: "Pure NAD+ infusion for anti-aging & cellular renewal. High-dose NAD+ fuels mitochondria, boosts DNA repair. Get optimal results with an oversight by our certified doctor.",
         benefits: [
           {
@@ -461,7 +591,7 @@ export const servicesData = [
         id: "booster-nad-plus",
         name: "Booster NAD+ Anti Aging",
         price: "1.900.000",
-        image: "/images/booster-nad.jpg",
+        image: "/images/iv-therapy-services/004.webp",
         desc: "Energy, anti-aging & cellular repair. NAD+ infusion enhances mitochondrial function, supports DNA repair, cognitive clarity, endurance, and oxidative defense.",
         benefits: [
           {
@@ -474,7 +604,7 @@ export const servicesData = [
         id: "basic-immune",
         name: "Basic Immune Booster",
         price: "1.675.000",
-        image: "/images/basic-immune.jpg",
+        image: "/images/iv-therapy-services/005.webp",
         desc: "Foundational immune support. Delivers electrolytes, Vitamin B-Complex, and Vitamin C to boost your defenses, energy, and collagen synthesis.",
         benefits: [
           {
@@ -487,7 +617,7 @@ export const servicesData = [
         id: "standard-immune",
         name: "Standard Immune Booster",
         price: "2.075.000",
-        image: "/images/standard-immune.jpg",
+        image: "/images/iv-therapy-services/006.webp",
         desc: "Enhanced immune formula. High-dose Vitamin C, B-Complex, and electrolytes to power metabolism, energy, red blood cells, and skin health.",
         benefits: [
           {
@@ -500,7 +630,7 @@ export const servicesData = [
         id: "super-immune",
         name: "Super Immune Booster",
         price: "2.440.000",
-        image: "/images/super-immune.jpg",
+        image: "/images/iv-therapy-services/007.webp",
         desc: "Potent IV drip combining electrolytes, NAC-Glutathione, Zinc, and extensive vitamins. Delivers formidable immune enhancement and antioxidant defenses.",
         benefits: [
           {
@@ -513,7 +643,7 @@ export const servicesData = [
         id: "hangover-infusion",
         name: "Hangover Infusion",
         price: "1.490.000",
-        image: "/images/hangover.webp",
+        image: "/images/iv-therapy-services/008.webp",
         desc: "Quick 30-60 minute procedure designed to help relieve hangover symptoms through rapid hydration and a targeted combination of vitamins and electrolytes.",
         benefits: [
           {
@@ -526,7 +656,7 @@ export const servicesData = [
         id: "fever-infusion",
         name: "Fever Infusion",
         price: "1.190.000",
-        image: "/images/fever-infusion.jpg",
+        image: "/images/iv-therapy-services/009.webp",
         desc: "Rapid recovery of high fever for adults through intravenous and can be beneficial to restore body fluids.",
         benefits: [
           {
@@ -539,7 +669,7 @@ export const servicesData = [
         id: "gastritis-infusion",
         name: "GERD / Gastritis Infusion",
         price: "1.890.000",
-        image: "/images/gastritis.webp",
+        image: "/images/iv-therapy-services/010.webp",
         desc: "Useful for treating inflammation in the stomach or gaster caused by irritation due to stomach acid.",
         benefits: [
           {
@@ -552,7 +682,7 @@ export const servicesData = [
         id: "iron-infusion",
         name: "Iron Infusion",
         price: "1.790.000",
-        image: "/images/iron-infusion.jpg",
+        image: "/images/iv-therapy-services/011.webp",
         desc: "An effective treatment for iron deficiency, the condition that causes tiredness and affects your ability to function.",
         benefits: [
           {
@@ -565,7 +695,7 @@ export const servicesData = [
         id: "candida-iv",
         name: "Candida IV Treatment",
         price: "1.400.000",
-        image: "/images/candida-iv.jpg",
+        image: "/images/iv-therapy-services/012.webp",
         desc: "Candida control infusion. Tackles yeast overgrowth at its source with targeted nutrients to restore balance and wellbeing.",
         benefits: [
           {
@@ -582,7 +712,7 @@ export const servicesData = [
         id: "gym-power",
         name: "Gym Power Infusion",
         price: "1.490.000",
-        image: "/images/gym-power.jpg",
+        image: "/images/iv-therapy-services/013.webp",
         desc: "Enhance your workout with a specially formulated infusion designed to elevate energy levels, improve focus, and prepare your muscles for the challenges ahead.",
         benefits: [
           {
@@ -595,7 +725,7 @@ export const servicesData = [
         id: "gym-recovery",
         name: "Gym Recovery Infusion",
         price: "1.490.000",
-        image: "/images/gym-recovery.jpg",
+        image: "/images/iv-therapy-services/014.webp",
         desc: "Speed up muscle recovery and reduce post-workout fatigue with a replenishing infusion that helps repair muscle cells and restore energy levels.",
         benefits: [
           {
@@ -608,7 +738,7 @@ export const servicesData = [
         id: "jetlag-night",
         name: "Jetlag Night Switch",
         price: "1.490.000",
-        image: "/images/jetlag-night.jpg",
+        image: "/images/iv-therapy-services/015.webp",
         desc: "For travelers arriving from the West who feel wide awake at Bali bedtime. Downshifts the nervous system and supports the body's natural 'sleep gate'.",
         benefits: [
           {
@@ -621,7 +751,7 @@ export const servicesData = [
         id: "jetlag-day",
         name: "Jetlag Day Anchor",
         price: "2.690.000",
-        image: "/images/jetlag-day.jpg",
+        image: "/images/iv-therapy-services/016.webp",
         desc: "For travelers who feel sleepy too early in the afternoon then wake up at 2-4am. Builds a strong 'day signal' and improves sleep consolidation.",
         benefits: [
           {

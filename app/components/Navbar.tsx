@@ -123,7 +123,7 @@ export default function Navbar() {
           </ul>
 
           <Link
-            href="https://wa.me/6281935250752"
+            href="https://wa.me/62085743333986"
             target="_blank"
             className="flex items-center gap-3 bg-blue-600 text-white px-8 py-3.5 rounded-full text-[10px] font-black shadow-2xl shadow-slate-900/10 hover:bg-slate-900 hover:shadow-blue-600/20 transition-all duration-500 active:scale-95 group relative overflow-hidden"
           >

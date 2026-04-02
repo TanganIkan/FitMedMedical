@@ -16,7 +16,6 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-20">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2 mb-8">
-              {/* UPDATE LOGO BRAND */}
               <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl italic shadow-lg shadow-blue-600/20 text-white">F</div>
               <span className="text-2xl font-black tracking-tighter uppercase italic">
                 Fit Med <span className="text-blue-500">Medical</span>
@@ -44,7 +43,6 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-blue-500 italic">Navigation</h4>
             <ul className="space-y-4">
-              {/* UPDATE LINK NAVIGATION SESUAI NAVBAR */}
               {[
                 { name: "Home", href: "/" },
                 { name: "Doctors", href: "/doctor" },
@@ -80,9 +78,9 @@ export default function Footer() {
                 <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-lg">
                   <Phone className="w-5 h-5" />
                 </div>
-                <Link href="https://wa.me/6281935250752" target="_blank">
+                <Link href="https://wa.me/6285743333986" target="_blank">
                   <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1 italic">WhatsApp 24/7</p>
-                  <p className="text-sm font-bold text-slate-200">+62 819 3525 0752</p>
+                  <p className="text-sm font-bold text-slate-200">+62 85 743 333 986</p>
                 </Link>
               </div>
               <div className="flex gap-4">

@@ -4,8 +4,7 @@ import { useParams } from "next/navigation";
 import { servicesData } from "../../lib/services-data";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-
+import { ArrowLeft, ChevronDown } from "lucide-react";
 
 import Testimoni from "../../components/Testimoni";
 import Maps from "../../components/Maps";
@@ -27,29 +26,54 @@ export default function ServiceCategoryPage() {
     );
   }
 
+  const heroImage = category.subServices[0]?.image;
+
   return (
     <main className="min-h-screen bg-white">
-      <section className="pt-40 pb-32 px-6">
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src={heroImage} alt={category.title} className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
+          <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
+            <Link href="/" className="inline-flex items-center gap-2 text-white/60 font-black text-[10px] uppercase tracking-[0.3em] mb-12 hover:text-white transition-colors group italic">
+              <ArrowLeft size={14} strokeWidth={3} className="group-hover:-translate-x-1 transition-transform" />
+              Back to Overview
+            </Link>
+          </motion.div>
+
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-8xl font-black text-white tracking-tighter italic uppercase leading-[0.8] mb-8">
+            {category.title}
+            <span className="text-blue-600">.</span>
+          </motion.h1>
+
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-white/80 font-bold text-lg md:text-xl max-w-2xl italic leading-tight">
+            {`Explore our specialized ${category.title} services, delivered by certified professionals directly to your location in Bali.`}
+          </motion.p>
+
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4 }} className="mt-12">
+            <Link href="#treatments" className="px-10 py-5 bg-blue-600 text-white rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-2xl shadow-blue-600/20 italic">
+              View Services
+            </Link>
+          </motion.div>
+        </div>
+
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30 animate-bounce">
+          <ChevronDown size={32} />
+        </div>
+      </section>
+
+      <section id="treatments" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <Link href="/" className="inline-flex items-center gap-2 text-slate-400 font-black text-[10px] uppercase tracking-[0.2em] mb-12 hover:text-blue-600 transition-colors group">
-            <ArrowLeft size={16} strokeWidth={3} className="group-hover:-translate-x-1 transition-transform" />
-            Back to Overview
-          </Link>
-
-          <header className="mb-20">
-            <motion.h1 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="text-5xl md:text-8xl font-black text-slate-950 tracking-tighter italic uppercase leading-[0.8]">
-              {category.title}
-              <span className="text-blue-600">.</span>
-            </motion.h1>
-            <p className="mt-8 text-slate-500 font-bold text-lg max-w-xl italic">Explore our specialized {category.title} services, delivered by certified professionals directly to your location in Bali.</p>
-          </header>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {category.subServices.map((service, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-8 rounded-[48px] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-blue-600/10 transition-all duration-500 flex flex-col group"
               >

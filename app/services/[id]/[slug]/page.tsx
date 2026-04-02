@@ -55,7 +55,7 @@ export default function ServiceDetailPage() {
                 className="group border-[1.5px] border-slate-100 rounded-[40px] p-5 flex flex-col h-full hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500"
               >
                 <div className="aspect-square rounded-[28px] overflow-hidden mb-6 border border-slate-50">
-                  <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
                 </div>
 
                 <h3 className="font-black text-slate-900 text-lg mb-2 uppercase italic leading-tight tracking-tight">{item.name}</h3>
@@ -63,9 +63,9 @@ export default function ServiceDetailPage() {
 
                 <div className="space-y-3">
                   <a
-                    href={`https://wa.me/6281935250752?text=Halo%20Trishnanda,%20saya%20tertarik%20dengan%20${encodeURIComponent(item.name)}`}
+                    href={`https://wa.me/62085743333986?text=Hi%20Fit%20Med%20Medical,%20I'm%20interested%20in%20booking%20the%20${encodeURIComponent(item.name)}%20service.%20Could%20you%20please%20provide%20more%20information%20about%20the%20available%20schedule?%20Thank%20you!`}
                     target="_blank"
-                    className="w-full bg-blue-600 text-white py-4 rounded-2xl flex items-center justify-center gap-2 font-black text-[10px] uppercase tracking-widest shadow-lg shadow-blue-600/20 hover:bg-slate-950 transition-all"
+                    className="w-full bg-slate-900 text-white py-4 rounded-2xl flex items-center justify-center gap-2 font-black text-[10px] uppercase tracking-widest shadow-lg shadow-blue-600/20 hover:bg-blue-600 transition-all"
                   >
                     <Phone size={14} fill="white" /> Consult Now
                   </a>
@@ -84,11 +84,8 @@ export default function ServiceDetailPage() {
     );
   }
 
-  // ================================================================
-  // KONDISI 2: TAMPILAN NORMAL (DETAIL DOCTOR, IV, HOME CARE)
-  // ================================================================
   return (
-    <main className="bg-white min-h-screen text-left">
+    <main className="min-h-screen text-left">
       <section className="pt-40 pb-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-center gap-4 mb-16">
@@ -170,7 +167,7 @@ export default function ServiceDetailPage() {
                   </div>
 
                   <a
-                    href={`https://wa.me/6281935250752?text=Halo%20Trishnanda,%20saya%20ingin%20melakukan%20tes%20${encodeURIComponent(service.name)}`}
+                    href={`https://wa.me/62085743333986?text=Hi%20Fit%20Med%20Medical,%20I'm%20interested%20in%20booking%20the%20${encodeURIComponent(service.name)}%20service.%20Could%20you%20please%20provide%20more%20information%20about%20the%20available%20schedule?%20Thank%20you!`}
                     target="_blank"
                     className="w-full py-5 bg-blue-600 text-white rounded-2xl font-black text-[11px] uppercase tracking-[0.3em] text-center shadow-xl shadow-blue-600/30 hover:bg-white hover:text-blue-600 hover:scale-[1.02] transition-all active:scale-95 flex items-center justify-center gap-3 group"
                   >
@@ -221,7 +218,7 @@ export default function ServiceDetailPage() {
                       <h3 className="text-3xl font-black leading-none mb-3 tracking-tighter italic uppercase">{item.name}</h3>
                       <Link
                         href={`/services/${params.id}/${item.id}`}
-                        className="w-full py-4.5 bg-slate-900 text-white rounded-2xl font-black text-[15px] text-center hover:bg-blue-600 hover:text-white uppercase  transition-all text-center flex items-center justify-center shadow-lg"
+                        className="w-full py-4.5 bg-slate-900 text-white rounded-2xl font-black text-[15px] text-center hover:bg-blue-600 hover:text-white uppercase  transition-all flex items-center justify-center shadow-lg"
                       >
                         See Detail
                       </Link>

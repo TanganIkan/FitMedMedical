@@ -1,5 +1,4 @@
 import Hero from "./components/Hero";
-import PromotionCarousel from "./promotion/PromotionCarousel";
 import Services from "./components/Services";
 import OurTeam from "./components/OurTeam";
 import LatestNews from "./components/LatestNews";

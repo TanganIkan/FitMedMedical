@@ -75,7 +75,7 @@ export default function Hero() {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className="mt-12 flex flex-wrap gap-4 items-center">
               <Link
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6285743333986"
                 className="inline-flex items-center gap-3 px-10 py-5 bg-blue-600 text-white font-black text-xs uppercase tracking-[0.2em] rounded-full hover:bg-slate-900 transition-all duration-500 transform hover:scale-105 active:scale-95 shadow-2xl shadow-slate-900/20 group italic"
               >
                 <div className="relative">

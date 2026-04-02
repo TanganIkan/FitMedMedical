@@ -174,7 +174,7 @@ export default function AboutPage() {
               <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
               <div className="w-full md:w-1/2 relative">
                 <div className="relative z-10 aspect-[4/3] rounded-[40px] overflow-hidden border-[10px] border-white/5 shadow-2xl transition-transform duration-700 group-hover:scale-105 group-hover:-rotate-2">
-                  <img src="/images/trusted.png" alt="Medical Team" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
+                  <img src="/images/trusted.webp" alt="Medical Team" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent opacity-60" />
                 </div>

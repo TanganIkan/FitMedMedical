@@ -43,10 +43,9 @@ export default function ItemDetailPage() {
   }
 
   return (
-    <main className="bg-white min-h-screen text-left">
+    <main className="min-h-screen text-left">
       <section className="pt-40 pb-32 px-6">
         <div className="max-w-7xl mx-auto">
-          {/* NAVIGATION */}
           <div className="flex flex-wrap items-center gap-4 mb-16">
             <Link href={`/services/${params.id}/${params.slug}`} className="inline-flex items-center gap-2 text-slate-400 font-black text-[10px] uppercase tracking-[0.2em] hover:text-blue-600 transition-colors group">
               <ArrowLeft size={16} strokeWidth={3} className="group-hover:-translate-x-1.5 transition-transform" />
@@ -120,9 +119,9 @@ export default function ItemDetailPage() {
                 <div className="flex justify-between items-end"></div>
 
                 <a
-                  href={`https://wa.me/6281935250752?text=Halo%20Trishnanda,%20saya%20ingin%20melakukan%20tes%20${encodeURIComponent(item.name)}`}
+                  href={`https://wa.me/62085743333986?text=Hi%20Fit%20Med%20Medical,%20I'm%20interested%20in%20booking%20the%20${encodeURIComponent(item.name)}%20service.%20Could%20you%20please%20provide%20more%20information%20about%20the%20available%20schedule?%20Thank%20you!`}
                   target="_blank"
-                  className="w-full py-5 bg-blue-600 text-white rounded-2xl font-black text-[11px] uppercase tracking-[0.3em] text-center shadow-xl shadow-blue-600/30 hover:bg-black hover:scale-[1.02] transition-all active:scale-95 flex items-center justify-center gap-3 group"
+                  className="w-full py-5 bg-slate-900 text-white rounded-2xl font-black text-[11px] uppercase tracking-[0.3em] text-center shadow-xl shadow-blue-600/30 hover:bg-blue-600 hover:scale-[1.02] transition-all active:scale-95 flex items-center justify-center gap-3 group"
                 >
                   <Phone size={16} className="group-hover:animate-bounce" />
                   Book This Test Now
@@ -163,11 +162,14 @@ export default function ItemDetailPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
                     <div className="absolute inset-0 p-10 flex flex-col justify-end text-white text-left">
                       <Zap className="mb-4 text-blue-400" size={24} />
-                      <p className="text-[12px] font-black uppercase tracking-widest opacity-80 mb-2 italic">IDR {item.price}</p>
+
+                      {params.id !== "lab" && <p className="text-[12px] font-black uppercase tracking-widest opacity-80 mb-2 italic">IDR {item.price}</p>}
+
                       <h3 className="text-3xl font-black leading-none mb-3 tracking-tighter italic uppercase">{item.name}</h3>
+
                       <Link
                         href={`/services/${params.id}/${item.id}`}
-                        className="w-full py-4.5 bg-white text-blue-600 rounded-2xl font-black text-[15px] text-center hover:bg-slate-950 hover:text-white transition-all uppercase tracking-widest"
+                        className="w-full py-4.5 bg-slate-900 text-white rounded-2xl font-black text-[15px] text-center hover:bg-blue-600 hover:text-white uppercase  transition-all flex items-center justify-center shadow-lg"
                       >
                         See Detail
                       </Link>
