@@ -96,7 +96,7 @@ export default function Hero() {
           <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="mt-16 lg:mt-0 lg:col-span-6 relative z-10 flex items-center justify-center">
             <div className="relative w-full max-w-none group">
               <div
-                className="relative"
+                className="relative hidden lg:block" // Tambahkan 'hidden' untuk mobile, 'lg:block' untuk desktop
                 style={{
                   maskImage: "linear-gradient(to bottom, black 70%, transparent 98%)",
                   WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 98%)",
@@ -110,7 +110,7 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-6 -right-4 bg-white/90 backdrop-blur-md p-5 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-blue-50 hidden md:flex items-center gap-4 z-30"
+                className="absolute -bottom-6 -right-4 bg-white/90 backdrop-blur-md p-5 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-blue-50 hidden lg:flex items-center gap-4 z-30 "
               >
                 <div className="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-200">
                   <CheckCircle2 size={24} />

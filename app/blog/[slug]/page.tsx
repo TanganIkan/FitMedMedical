@@ -1,21 +1,100 @@
-import { blogData } from "../../lib/blog-data";
 import { notFound } from "next/navigation";
 import { Calendar, User, ArrowLeft, Share2, Phone } from "lucide-react";
 import Link from "next/link";
+import { fetchAPI } from "../../lib/api"; // Sesuaikan path ini jika perlu
 
+// 1. Tipe Data untuk Detail Artikel
+interface SinglePostResponse {
+  post: {
+    title: string;
+    content: string;
+    date: string;
+    excerpt: string;
+    author?: {
+      node: { name: string };
+    };
+    featuredImage?: {
+      node: { sourceUrl: string };
+    };
+    categories?: {
+      nodes: { name: string }[];
+    };
+  } | null;
+}
+
+// 2. Mengambil semua slug untuk ISR/SSG Next.js
 export async function generateStaticParams() {
-  return blogData.map((post) => ({
-    slug: post.slug,
-  }));
+  const data = await fetchAPI<{ posts: { nodes: { slug: string }[] } }>(`
+    query AllSlugs {
+      posts(first: 100) {
+        nodes {
+          slug
+        }
+      }
+    }
+  `);
+
+  return (
+    data?.posts?.nodes?.map((node) => ({
+      slug: node.slug,
+    })) || []
+  );
+}
+
+// 3. Mengambil data satu artikel berdasarkan Slug
+async function getPostBySlug(slug: string) {
+  const data = await fetchAPI<SinglePostResponse>(
+    `
+    query GetPostBySlug($id: ID!) {
+      post(id: $id, idType: SLUG) {
+        title
+        content
+        date
+        excerpt
+        author {
+          node {
+            name
+          }
+        }
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        categories {
+          nodes {
+            name
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: { id: slug },
+    },
+  );
+  return data?.post;
 }
 
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = blogData.find((p) => p.slug === slug);
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
+
+  const imageUrl = post.featuredImage?.node?.sourceUrl || "https://placehold.co/1200x600?text=No+Image";
+  const categoryName = post.categories?.nodes[0]?.name || "Medical";
+  const authorName = post.author?.node?.name || "Medical Team";
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  };
 
   return (
     <article className="min-h-screen bg-white pb-24 pt-32">
@@ -27,28 +106,30 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
 
         {/* HEADER SECTION */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-8 shadow-sm">{post.category}</div>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-8 shadow-sm">{categoryName}</div>
           <h1 className="text-4xl md:text-7xl font-black text-slate-900 leading-[0.9] tracking-tighter mb-10 italic uppercase">{post.title}</h1>
 
           <div className="flex flex-wrap items-center gap-6 py-6 border-y border-slate-100 text-[10px] font-black uppercase tracking-widest text-slate-400">
             <span className="flex items-center gap-2 italic">
-              <Calendar size={14} className="text-blue-600" /> {post.date}
+              <Calendar size={14} className="text-blue-600" /> {formatDate(post.date)}
             </span>
             <span className="flex items-center gap-2 italic">
-              <User size={14} className="text-blue-600" /> By {post.author}
+              <User size={14} className="text-blue-600" /> By {authorName}
             </span>
           </div>
         </div>
 
         <div className="relative aspect-video rounded-[40px] overflow-hidden mb-16 shadow-2xl shadow-blue-900/10 border border-slate-100">
-          <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+          <img src={imageUrl} alt={post.title} className="w-full h-full object-cover" />
         </div>
 
         <div className="prose prose-slate prose-lg max-w-none">
-          <p className="text-xl md:text-2xl text-slate-900 font-black mb-10 leading-tight uppercase italic decoration-blue-100 underline underline-offset-8 decoration-4">{post.excerpt}</p>
+          {/* Excerpt dari WordPress. Gunakan CSS selector [&>p] agar style-mu tetap teraplikasi ke tag <p> bawaan WordPress */}
+          <div className="text-xl md:text-2xl text-slate-900 font-black mb-10 leading-tight uppercase italic decoration-blue-100 underline underline-offset-8 decoration-4 [&>p]:m-0" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
 
           <div className="text-slate-600 font-medium italic leading-relaxed space-y-8">
-            <p className="whitespace-pre-line">{post.content}</p>
+            {/* Content utama dari WordPress */}
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
 
             <p>At **Fit Med Medical**, our priority is your recovery. Whether you are staying in a villa in Seminyak, Canggu, or Uluwatu, our professional medical team is ready to provide top-tier healthcare services at your doorstep.</p>
           </div>

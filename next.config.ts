@@ -5,12 +5,14 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com', // Daftarkan Unsplash di sini
+        protocol: "https",
+        hostname: "images.unsplash.com", // Daftarkan Unsplash di sini
       },
       {
-        protocol: 'https',
-        hostname: 'cdn.sanity.io', // Sekalian daftarkan Sanity buat blog nanti
+        protocol: "http",
+        hostname: "fitmed-apilocal.local",
+        port: "",
+        pathname: "/**",
       },
     ],
   },

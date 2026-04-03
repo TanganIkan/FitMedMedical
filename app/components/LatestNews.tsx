@@ -1,16 +1,75 @@
-"use client"; // Tambahkan ini jika file ini berada di dalam components/
-
 import { Calendar, ArrowRight, BookOpen } from "lucide-react";
 import Link from "next/link";
-// 1. IMPORT DATA DUMMY & TYPE
-import { blogData, BlogPost } from "../lib/blog-data";
+// 1. Import fungsi fetcher kamu (pastikan path-nya sesuai)
+import { fetchAPI } from "../lib/api";
 
-export default function LatestNews() {
-  // 2. AMBIL 3 ARTIKEL TERBARU SAJA
-  const posts = blogData.slice(0, 3);
+// 2. Definisikan tipe data balikan dari GraphQL
+interface PostNode {
+  id: string;
+  title: string;
+  slug: string;
+  date: string;
+  excerpt: string;
+  featuredImage?: {
+    node: {
+      sourceUrl: string;
+    };
+  };
+  categories?: {
+    nodes: { name: string }[];
+  };
+}
+
+interface LatestPostsResponse {
+  posts: {
+    nodes: PostNode[];
+  };
+}
+
+// 3. Fungsi untuk mengambil 3 artikel terbaru
+async function getLatestPosts() {
+  const data = await fetchAPI<LatestPostsResponse>(`
+    query LatestPosts {
+      posts(first: 3, where: { orderby: { field: DATE, order: DESC } }) {
+        nodes {
+          id
+          title
+          slug
+          date
+          excerpt
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+          categories {
+            nodes {
+              name
+            }
+          }
+        }
+      }
+    }
+  `);
+  return data?.posts?.nodes || [];
+}
+
+// 4. Ubah komponen menjadi async function
+export default async function LatestNews() {
+  // Ambil data langsung dari fungsi di atas
+  const posts = await getLatestPosts();
 
   // Jika data kosong, tidak render apa-apa
   if (!posts || posts.length === 0) return null;
+
+  // Helper untuk memformat tanggal bawaan WordPress
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  };
 
   return (
     <section id="news" className="relative py-24 overflow-hidden">
@@ -23,37 +82,45 @@ export default function LatestNews() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post: BlogPost) => (
-            <Link
-              key={post.id}
-              href={`/blog/${post.slug}`}
-              className="group flex flex-col bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-2 h-full"
-            >
-              <div className="relative h-64 overflow-hidden">
-                <img src={post.image || "https://placehold.co/600x400?text=No+Image"} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute top-4 left-4">
-                  <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black uppercase tracking-widest text-blue-600 shadow-sm">{post.category || "Medical"}</span>
+          {posts.map((post) => {
+            // Ambil URL gambar atau gunakan placeholder
+            const imageUrl = post.featuredImage?.node?.sourceUrl || "https://placehold.co/600x400?text=No+Image";
+            // Ambil kategori pertama
+            const categoryName = post.categories?.nodes[0]?.name || "Medical";
+
+            return (
+              <Link
+                key={post.id}
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-2 h-full"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img src={imageUrl} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black uppercase tracking-widest text-blue-600 shadow-sm">{categoryName}</span>
+                  </div>
                 </div>
-              </div>
 
-              <div className="p-8 flex flex-col flex-grow">
-                <div className="flex items-center gap-2 text-slate-400 text-[11px] mb-4 font-bold uppercase tracking-wider">
-                  <Calendar className="w-3.5 h-3.5 text-blue-500" />
-                  {/* Format tanggal dari string dummy */}
-                  {post.date}
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 text-slate-400 text-[11px] mb-4 font-bold uppercase tracking-wider">
+                    <Calendar className="w-3.5 h-3.5 text-blue-500" />
+                    {/* Format tanggal di sini */}
+                    {formatDate(post.date)}
+                  </div>
+
+                  <h3 className="text-xl font-black text-slate-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">{post.title}</h3>
+
+                  {/* Render excerpt HTML dari WordPress menggunakan dangerouslySetInnerHTML */}
+                  <div className="text-slate-500 text-sm leading-relaxed mb-8 line-clamp-2 font-medium [&>p]:m-0" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+
+                  <div className="mt-auto flex items-center gap-2 text-blue-600 font-black text-xs uppercase tracking-widest group/link">
+                    Read Article
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                  </div>
                 </div>
-
-                <h3 className="text-xl font-black text-slate-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">{post.title}</h3>
-
-                <p className="text-slate-500 text-sm leading-relaxed mb-8 line-clamp-2 font-medium">{post.excerpt}</p>
-
-                <div className="mt-auto flex items-center gap-2 text-blue-600 font-black text-xs uppercase tracking-widest group/link">
-                  Read Article
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="mt-20 text-center">

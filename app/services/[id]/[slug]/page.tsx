@@ -96,7 +96,7 @@ export default function ServiceDetailPage() {
           </div>
 
           <div className="grid lg:grid-cols-12 gap-16 items-start">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="lg:col-span-7 sticky top-40">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="lg:col-span-7 lg:sticky lg:top-40">
               <div className="relative aspect-[16/10] md:aspect-[16/9] rounded-[48px] overflow-hidden border-[12px] border-slate-50 shadow-2xl">
                 <img src={service.image} alt={service.name} className="w-full h-full object-cover" />
               </div>
