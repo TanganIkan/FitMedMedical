@@ -150,7 +150,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
             </div>
 
             <Link
-              href="https://wa.me/6281935250752"
+              href="https://wa.me/6285743333986"
               target="_blank"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-full hover:bg-slate-900 transition-all active:scale-95 shadow-xl shadow-blue-600/20 italic"
             >
