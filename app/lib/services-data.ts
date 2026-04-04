@@ -227,7 +227,7 @@ export const servicesData = [
         id: "infectious-disease-tests",
         name: "Infectious Disease Tests",
         price: "450.000",
-        image: "/images/home-lab-service/infectious.webp",
+        image: "/images/home-lab-service/Infectious.webp",
         desc: "Laboratory tests to identify bacterial, viral, and infectious diseases accurately and quickly.",
         items: [
           {
