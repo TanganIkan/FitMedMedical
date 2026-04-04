@@ -2,10 +2,8 @@ import Link from "next/link";
 import { Calendar, ArrowRight } from "lucide-react";
 import { fetchAPI } from "../lib/api";
 
-// 🚀 BARIS PENTING: Memaksa Next.js untuk memperbarui halaman setiap 60 detik
-export const revalidate = 60;
+export const revalidate = 10;
 
-// 1. Definisikan tipe data balikan dari GraphQL
 interface PostNode {
   id: string;
   title: string;
@@ -81,9 +79,8 @@ export default async function BlogListPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => {
-            // Ambil URL gambar atau gunakan placeholder jika tidak ada
             const imageUrl = post.featuredImage?.node?.sourceUrl || "https://placehold.co/600x400?text=No+Image";
-            // Ambil kategori pertama atau default
+
             const categoryName = post.categories?.nodes[0]?.name || "Uncategorized";
 
             return (

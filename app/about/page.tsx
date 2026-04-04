@@ -235,36 +235,40 @@ export default function AboutPage() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 1 }}
             viewport={{ once: true }}
-            className="relative bg-slate-950 rounded-[60px] md:rounded-[100px] p-12 md:p-24 overflow-hidden group border-[12px] border-white shadow-2xl shadow-blue-900/10"
+            /* Perubahan: border-8 di mobile, p-8 di mobile agar ruang gerak teks lebih luas */
+            className="relative bg-slate-950 rounded-[40px] md:rounded-[100px] p-8 md:p-24 overflow-hidden group border-[8px] md:border-[12px] border-white shadow-2xl shadow-blue-900/10"
           >
             {/* Background Ornament */}
             <div className="absolute top-0 right-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
             <div className="absolute -top-20 -right-20 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px]" />
 
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
-              <div className="flex flex-col items-center md:items-start">
-                {/* LIVE BADGE */}
-                <div className="flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-white/10 shadow-xl mb-10">
-                  <span className="relative flex h-3 w-3">
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+              <div className="flex flex-col items-center md:items-start w-full">
+                {/* LIVE BADGE - Disesuaikan mb-nya agar tidak terlalu jauh di mobile */}
+                <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 shadow-xl mb-6 md:mb-10">
+                  <span className="relative flex h-2 w-2 md:h-3 md:w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 md:h-3 md:w-3 bg-blue-500"></span>
                   </span>
-                  <span className="text-[10px] font-black text-blue-400 uppercase tracking-[0.3em] italic">Active Patient Pulse</span>
+                  <span className="text-[8px] md:text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] md:tracking-[0.3em] italic">Active Patient Pulse</span>
                 </div>
 
-                <h3 className="text-white text-[12px] font-black uppercase tracking-[0.5em] mb-4 opacity-40">Trusted By Over</h3>
+                <h3 className="text-white text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] mb-2 md:mb-4 opacity-40">Trusted By Over</h3>
 
-                <div className="text-[100px] md:text-[220px] font-black text-white italic tracking-[-0.08em] leading-none transition-all duration-700 group-hover:tracking-normal group-hover:text-blue-500">
+                {/* ANGKA 45K - DIKECILKAN UNTUK MOBILE (text-7xl vs 220px) */}
+                <div className="text-7xl sm:text-8xl md:text-[220px] font-black text-white italic tracking-[-0.08em] leading-none transition-all duration-700 group-hover:tracking-normal group-hover:text-blue-500 text-center md:text-left">
                   45k<span className="text-blue-600 group-hover:text-white">+</span>
                 </div>
               </div>
 
-              <div className="max-w-xs text-center md:text-left border-t md:border-t-0 md:border-l border-white/10 pt-10 md:pt-0 md:pl-12">
-                <p className="text-white text-2xl md:text-4xl font-black italic tracking-tighter leading-tight mb-6">
-                  Real Lives. <br /> <span className="text-blue-500">Real Recovery.</span>
-                </p>{" "}
-                {/* Pastikan di sini penutupnya </p> sesuai dengan pembukanya */}
-                <p className="text-slate-400 font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] leading-relaxed">Successfully delivering professional healthcare directly to villas across the entire Bali region.</p>
+              {/* Section Teks Bawah/Kanan */}
+              <div className="w-full max-w-xs text-center md:text-left border-t md:border-t-0 md:border-l border-white/10 pt-8 md:pt-0 md:pl-12">
+                <p className="text-white text-xl md:text-4xl font-black italic tracking-tighter leading-[1.1] mb-4 md:mb-6 uppercase">
+                  Real Lives. <br className="hidden md:block" /> <span className="text-blue-500">Real Recovery.</span>
+                </p>
+                <p className="text-slate-400 font-bold text-[9px] md:text-xs uppercase tracking-[0.15em] md:tracking-[0.2em] leading-relaxed">
+                  Successfully delivering professional healthcare directly to villas across the entire Bali region.
+                </p>
               </div>
             </div>
           </motion.div>
