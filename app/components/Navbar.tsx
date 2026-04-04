@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Phone, Home, ChevronDown, Heart, Syringe, Beaker, Stethoscope, Menu, X, ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -44,8 +45,14 @@ export default function Navbar() {
           </button>
 
           <Link href="/" className="hidden lg:flex items-center gap-2 group shrink-0">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center transform rotate-3 group-hover:rotate-12 transition-transform shadow-lg shadow-blue-200">
-              <span className="text-white font-bold text-lg -rotate-3 italic">F</span>
+            <div className="relative w-10 h-10 md:w-12 md:h-12 shrink-0 overflow-hidden">
+              <Image
+                src="/images/Logo/fit-med.png" // Pastikan nama file & folder di public/ sudah benar
+                alt="Logo Fit Med Medical"
+                fill
+                className="object-contain transition-transform duration-300 group-hover:scale-110"
+                priority
+              />
             </div>
             <span className="text-xl font-black text-slate-900 tracking-tighter italic uppercase">
               Fit Med Medical<span className="text-blue-600">.</span>
