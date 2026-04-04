@@ -261,7 +261,7 @@ export const servicesData = [
             name: "Malaria Test",
             price: "350.000",
             desc: "Rapid diagnostic test to identify malaria infection and guide timely treatment.",
-            image: "/images/Infectious/malaria-test.webp",
+            image: "/images/Infectious/Malaria-Test.webp",
             benefits: [
               {
                 title: "Benefit",
@@ -274,7 +274,7 @@ export const servicesData = [
             name: "Typhoid Fever Test",
             price: "350.000",
             desc: "Laboratory test to diagnose typhoid fever and support proper medical treatment.",
-            image: "/images/Infectious/typhoid-fever-test.webp",
+            image: "/images/Infectious/Typhoid-Fever-Test.webp",
             benefits: [
               {
                 title: "Benefit",
@@ -287,7 +287,7 @@ export const servicesData = [
             name: "STI Panel",
             price: "850.000",
             desc: "Comprehensive screening to detect sexually transmitted infections accurately and confidentially.",
-            image: "/images/Infectious/STI-Panel.webp",
+            image: "/images/Infectious/sti-panel.webp",
             benefits: [
               {
                 title: "Benefit",
@@ -306,7 +306,7 @@ export const servicesData = [
           {
             id: "hormone-specialised-test",
             name: "Hormone Specialised Test",
-            image: "/images/hormone-specialised-test/hormone.webp",
+            image: "/images/Hormone-Specialised-Test/Hormone.webp",
             desc: "Advanced laboratory tests to evaluate hormone balance and detect specific health conditions accurately.",
             benefits: [
               {
@@ -318,7 +318,7 @@ export const servicesData = [
           {
             id: "thyroid-function-test",
             name: "Thyroid Function Test (TSH, T3, T4)",
-            image: "/images/hormone-specialised-test/thyroid.webp",
+            image: "/images/Hormone-Specialised-Test/Thyroid.webp",
             desc: "Blood test to assess thyroid hormone levels and identify hypo- or hyperthyroid conditions.",
             benefits: [
               {
@@ -330,7 +330,7 @@ export const servicesData = [
           {
             id: "hormone-panel",
             name: "Hormone Panel (Including Testosterone)",
-            image: "/images/hormone-specialised-test/hormone-panel.webp",
+            image: "/images/Hormone-Specialised-Test/Hormone-Panel.webp",
             desc: "Comprehensive hormone screening to evaluate metabolic health, energy, and hormonal balance.",
             benefits: [
               {
@@ -342,7 +342,7 @@ export const servicesData = [
           {
             id: "psa-test",
             name: "Prostate Specific Antigen (PSA)",
-            image: "/images/hormone-specialised-test/psa.webp",
+            image: "/images/Hormone-Specialised-Test/PSA.webp",
             desc: "Screening test to assess prostate health and support early detection of prostate conditions.",
             benefits: [
               {
@@ -354,7 +354,7 @@ export const servicesData = [
           {
             id: "pregnancy-test",
             name: "Pregnancy Test (hCG)",
-            image: "/images/hormone-specialised-test/pregnancy-test.webp",
+            image: "/images/Hormone-Specialised-Test/Pregnancy-Test.webp",
             desc: "Reliable blood test to confirm pregnancy by detecting human chorionic gonadotropin (hCG).",
             benefits: [
               {
@@ -441,7 +441,7 @@ export const servicesData = [
           {
             id: "fecal-analysis",
             name: "Fecal Analysis",
-            image: "/images/Metabolic/fecal-analysis.webp",
+            image: "/images/Metabolic/Fecal-Analysis.webp",
             desc: "Stool test to assess digestive health, detect infections, parasites, and gastrointestinal disorders.",
             benefits: [
               {
