@@ -3,6 +3,15 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProgressBar from "./components/ProgressBar";
 import "./globals.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/images/Logo/fit-med.png",
+
+    apple: "/images/Logo/fit-med.png",
+  },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
