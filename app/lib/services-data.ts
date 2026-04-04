@@ -10,7 +10,7 @@ export const servicesData = [
         id: "doctor-home-service",
         name: "Doctor Home Service",
         price: "500.000",
-        image: "/images/doctor-consultation/doctor-home-service.webp",
+        image: "/images/Doctor-Consultation/Doctor-Home-Service.webp",
         desc: "Professional doctor home visit service providing medical consultation, diagnosis, treatment, and follow-up care directly at your home.",
         benefits: [
           { title: "Convenience", text: "Consult a healthcare professional from the comfort of your home, saving time and travel." },
@@ -22,7 +22,7 @@ export const servicesData = [
         id: "gp-online",
         name: "General Practitioner Online",
         price: "20.000",
-        image: "/images/doctor-consultation/general-practitioner-online.webp",
+        image: "/images/Doctor-Consultation/General-Practitioner-Online.webp",
         desc: "Access healthcare through convenient online consultations, addressing diagnoses, treatments, and follow-up care flexibly from your own space.",
         benefits: [
           { title: "Convenience", text: "Consult a healthcare professional from the comfort of your home, saving time and travel." },
@@ -36,7 +36,7 @@ export const servicesData = [
         name: "Medical Doctor Online Consultation",
         price: "40.000",
         desc: "Connect with specialized medical expertise remotely, eliminating the need for physical travel through our online platform.",
-        image: "/images/doctor-consultation/medical-doctor-online-consultation.webp",
+        image: "/images/Doctor-Consultation/Medical-Doctor-Online-Consultation.webp",
         benefits: [
           { title: "Pediatrician", text: "Consult with doctor specializing in the medical care of infants, children, and adolescents." },
           { title: "Surgeon", text: "Consult with medical professional skilled in performing surgical procedures." },
@@ -48,7 +48,7 @@ export const servicesData = [
         name: "Online Medical Prescription",
         price: "20.000",
         desc: "Online medical prescriptions allow patients to receive medications remotely through secure virtual consultations.",
-        image: "/images/doctor-consultation/online-medical-prescription.webp",
+        image: "/images/Doctor-Consultation/Online-Medical-Prescription.webp",
         benefits: [
           { title: "Convenience", text: "Receive prescriptions without visiting a physical clinic, saving time and effort." },
           { title: "Accessibility", text: "Improves access to medications for patients in remote areas." },
@@ -62,7 +62,7 @@ export const servicesData = [
         name: "Online Sick Leave Letter",
         price: "75.000",
         desc: "Online sick leave letters allow individuals to consult healthcare professionals remotely and obtain medical certificates through digital platforms.",
-        image: "/images/doctor-consultation/online-sick-leave-letter.webp",
+        image: "/images/Doctor-Consultation/Online-Sick-Leave-Letter.webp",
         benefits: [
           { title: "Convenience", text: "Receive prescriptions without visiting a physical clinic, saving time and effort." },
           { title: "Accessibility", text: "Easy access for individuals in remote areas or with limited mobility." },
@@ -463,7 +463,7 @@ export const servicesData = [
         id: "wound-care",
         name: "Wound and Care",
         price: "500.000",
-        image: "/images/home-care-services/wound-and-care.webp",
+        image: "/images/home-care-services/Wound-and-Care.webp",
         desc: "Comprehensive healthcare services covering expert wound and ostomy care, advanced wound dressing techniques, precise minor surgical procedures, and thorough post-surgical care to support optimal recovery.",
         benefits: [
           {
@@ -476,7 +476,7 @@ export const servicesData = [
         id: "monitoring",
         name: "Monitoring & Prevention",
         price: "200.000",
-        image: "/images/home-care-services/monitoring-&-prevention.webp",
+        image: "/images/home-care-services/Monitoring-&-Prevention.webp",
         desc: "Ensuring patient well-being through continuous vital sign monitoring and implementing preventive measures to reduce the risk of infections.",
         benefits: [
           {
@@ -489,7 +489,7 @@ export const servicesData = [
         id: "nurse-visit",
         name: "Nurse Home Visit",
         price: "250.000",
-        image: "/images/home-care-services/nurse-home-visit.webp",
+        image: "/images/home-care-services/Nurse-Home-Visit.webp",
         desc: "A Nurse Home Visit delivers professional healthcare directly to your home, providing personalized assessments, treatments, and health education.",
         benefits: [
           {
@@ -502,7 +502,7 @@ export const servicesData = [
         id: "pediatric-care",
         name: "Pediatric Home Care",
         price: "700.000",
-        image: "/images/home-care-services/pediatric-home-care.webp",
+        image: "/images/home-care-services/Pediatric-Home-Care.webp",
         desc: "Pediatric home care provides specialized medical services for children directly in their homes, ensuring comfort, safety, and convenient healthcare.",
         benefits: [
           {
@@ -515,7 +515,7 @@ export const servicesData = [
         id: "ent-care",
         name: "Otolaryngology Home Care",
         price: "700.000",
-        image: "/images/home-care-services/otolaryngology-home-care.webp",
+        image: "/images/home-care-services/Otolaryngology-Home-Care.webp",
         desc: "Otolaryngology home care provides specialized medical services for ear, nose, and throat conditions directly in the comfort of the patient's home.",
         benefits: [
           {
@@ -528,7 +528,7 @@ export const servicesData = [
         id: "dengue-fever",
         name: "Dengue Fever Home Care",
         price: "850.000",
-        image: "/images/home-care-services/dengue-fever-home-care.webp",
+        image: "/images/home-care-services/Dengue-Fever-Home-Care.webp",
         desc: "Dengue fever home care focuses on treating and managing dengue symptoms at home, supporting patient recovery while reducing transmission risks and hospital-related complications.",
         benefits: [
           {
@@ -548,7 +548,7 @@ export const servicesData = [
         id: "bali-belly",
         name: "Bali Belly Infusion",
         price: "1.990.000",
-        image: "/images/iv-therapy-services/001.webp",
+        image: "/images/IV-Therapy-Services/001.webp",
         desc: "Rapid GI reset hydration. Reduces nausea, relieves stomach cramps, and supports gut lining with electrolytes, anti-nausea agents, and essential vitamins.",
         benefits: [
           {
@@ -561,7 +561,7 @@ export const servicesData = [
         id: "super-bali-belly",
         name: "Super Bali Belly IV",
         price: "2.190.000",
-        image: "/images/iv-therapy-services/002.webp",
+        image: "/images/IV-Therapy-Services/002.webp",
         desc: "Advanced gut recovery & immunity boost. Enhances digestive relief with electrolytes, zinc, probiotics, and vitamins-protects gut barrier while strengthening your immune system.",
         benefits: [
           {
@@ -574,7 +574,7 @@ export const servicesData = [
         id: "nad-plus",
         name: "Pure NAD+ Anti Aging",
         price: "2.390.000",
-        image: "/images/iv-therapy-services/003.webp",
+        image: "/images/IV-Therapy-Services/003.webp",
         desc: "Pure NAD+ infusion for anti-aging & cellular renewal. High-dose NAD+ fuels mitochondria, boosts DNA repair. Get optimal results with an oversight by our certified doctor.",
         benefits: [
           {
@@ -591,7 +591,7 @@ export const servicesData = [
         id: "booster-nad-plus",
         name: "Booster NAD+ Anti Aging",
         price: "1.900.000",
-        image: "/images/iv-therapy-services/004.webp",
+        image: "/images/IV-Therapy-Services/004.webp",
         desc: "Energy, anti-aging & cellular repair. NAD+ infusion enhances mitochondrial function, supports DNA repair, cognitive clarity, endurance, and oxidative defense.",
         benefits: [
           {
@@ -604,7 +604,7 @@ export const servicesData = [
         id: "basic-immune",
         name: "Basic Immune Booster",
         price: "1.675.000",
-        image: "/images/iv-therapy-services/005.webp",
+        image: "/images/IV-Therapy-Services/005.webp",
         desc: "Foundational immune support. Delivers electrolytes, Vitamin B-Complex, and Vitamin C to boost your defenses, energy, and collagen synthesis.",
         benefits: [
           {
@@ -617,7 +617,7 @@ export const servicesData = [
         id: "standard-immune",
         name: "Standard Immune Booster",
         price: "2.075.000",
-        image: "/images/iv-therapy-services/006.webp",
+        image: "/images/IV-Therapy-Services/006.webp",
         desc: "Enhanced immune formula. High-dose Vitamin C, B-Complex, and electrolytes to power metabolism, energy, red blood cells, and skin health.",
         benefits: [
           {
@@ -630,7 +630,7 @@ export const servicesData = [
         id: "super-immune",
         name: "Super Immune Booster",
         price: "2.440.000",
-        image: "/images/iv-therapy-services/007.webp",
+        image: "/images/IV-Therapy-Services/007.webp",
         desc: "Potent IV drip combining electrolytes, NAC-Glutathione, Zinc, and extensive vitamins. Delivers formidable immune enhancement and antioxidant defenses.",
         benefits: [
           {
@@ -643,7 +643,7 @@ export const servicesData = [
         id: "hangover-infusion",
         name: "Hangover Infusion",
         price: "1.490.000",
-        image: "/images/iv-therapy-services/008.webp",
+        image: "/images/IV-Therapy-Services/008.webp",
         desc: "Quick 30-60 minute procedure designed to help relieve hangover symptoms through rapid hydration and a targeted combination of vitamins and electrolytes.",
         benefits: [
           {
@@ -656,7 +656,7 @@ export const servicesData = [
         id: "fever-infusion",
         name: "Fever Infusion",
         price: "1.190.000",
-        image: "/images/iv-therapy-services/009.webp",
+        image: "/images/IV-Therapy-Services/009.webp",
         desc: "Rapid recovery of high fever for adults through intravenous and can be beneficial to restore body fluids.",
         benefits: [
           {
@@ -669,7 +669,7 @@ export const servicesData = [
         id: "gastritis-infusion",
         name: "GERD / Gastritis Infusion",
         price: "1.890.000",
-        image: "/images/iv-therapy-services/010.webp",
+        image: "/images/IV-Therapy-Services/010.webp",
         desc: "Useful for treating inflammation in the stomach or gaster caused by irritation due to stomach acid.",
         benefits: [
           {
@@ -682,7 +682,7 @@ export const servicesData = [
         id: "iron-infusion",
         name: "Iron Infusion",
         price: "1.790.000",
-        image: "/images/iv-therapy-services/011.webp",
+        image: "/images/IV-Therapy-Services/011.webp",
         desc: "An effective treatment for iron deficiency, the condition that causes tiredness and affects your ability to function.",
         benefits: [
           {
@@ -695,7 +695,7 @@ export const servicesData = [
         id: "candida-iv",
         name: "Candida IV Treatment",
         price: "1.400.000",
-        image: "/images/iv-therapy-services/012.webp",
+        image: "/images/IV-Therapy-Services/012.webp",
         desc: "Candida control infusion. Tackles yeast overgrowth at its source with targeted nutrients to restore balance and wellbeing.",
         benefits: [
           {
@@ -712,7 +712,7 @@ export const servicesData = [
         id: "gym-power",
         name: "Gym Power Infusion",
         price: "1.490.000",
-        image: "/images/iv-therapy-services/013.webp",
+        image: "/images/IV-Therapy-Services/013.webp",
         desc: "Enhance your workout with a specially formulated infusion designed to elevate energy levels, improve focus, and prepare your muscles for the challenges ahead.",
         benefits: [
           {
@@ -725,7 +725,7 @@ export const servicesData = [
         id: "gym-recovery",
         name: "Gym Recovery Infusion",
         price: "1.490.000",
-        image: "/images/iv-therapy-services/014.webp",
+        image: "/images/IV-Therapy-Services/014.webp",
         desc: "Speed up muscle recovery and reduce post-workout fatigue with a replenishing infusion that helps repair muscle cells and restore energy levels.",
         benefits: [
           {
@@ -738,7 +738,7 @@ export const servicesData = [
         id: "jetlag-night",
         name: "Jetlag Night Switch",
         price: "1.490.000",
-        image: "/images/iv-therapy-services/015.webp",
+        image: "/images/IV-Therapy-Services/015.webp",
         desc: "For travelers arriving from the West who feel wide awake at Bali bedtime. Downshifts the nervous system and supports the body's natural 'sleep gate'.",
         benefits: [
           {
@@ -751,7 +751,7 @@ export const servicesData = [
         id: "jetlag-day",
         name: "Jetlag Day Anchor",
         price: "2.690.000",
-        image: "/images/iv-therapy-services/016.webp",
+        image: "/images/IV-Therapy-Services/016.webp",
         desc: "For travelers who feel sleepy too early in the afternoon then wake up at 2-4am. Builds a strong 'day signal' and improves sleep consolidation.",
         benefits: [
           {
