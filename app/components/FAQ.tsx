@@ -29,7 +29,6 @@ export default function FAQ() {
   return (
     <section className="py-24 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
-        {/* HEADER */}
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -61,7 +60,7 @@ export default function FAQ() {
 
               <AnimatePresence>
                 {activeIndex === index && (
-                  <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: "easeInOut" }} className="overflow-hidden">
+                  <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2, ease: "circOut" }} className="overflow-hidden">
                     <div className="px-8 pb-8 text-slate-500 leading-relaxed text-[14px] md:text-base">{item.answer}</div>
                   </motion.div>
                 )}

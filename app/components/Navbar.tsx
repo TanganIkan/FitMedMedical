@@ -46,20 +46,13 @@ export default function Navbar() {
 
           <Link href="/" className="hidden lg:flex items-center gap-2 group shrink-0">
             <div className="relative w-10 h-10 md:w-12 md:h-12 shrink-0 overflow-hidden">
-              <Image
-                src="/images/Logo/fitmed-logo.png" // Pastikan nama file & folder di public/ sudah benar
-                alt="Logo Fit Med Medical"
-                fill
-                className="object-contain transition-transform duration-300 group-hover:scale-110"
-                priority
-              />
+              <Image src="/images/Logo/fitmed-logo.png" alt="Logo Fit Med Medical" fill className="object-contain transition-transform duration-300 group-hover:scale-110" priority />
             </div>
             <span className="text-xl font-black text-slate-900 tracking-tighter italic uppercase">
               Fit Med Medical<span className="text-blue-600">.</span>
             </span>
           </Link>
 
-          {/* Desktop Links (TETAP SAMA) */}
           <ul className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <li key={link.name}>
