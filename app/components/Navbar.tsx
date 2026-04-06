@@ -47,7 +47,7 @@ export default function Navbar() {
           <Link href="/" className="hidden lg:flex items-center gap-2 group shrink-0">
             <div className="relative w-10 h-10 md:w-12 md:h-12 shrink-0 overflow-hidden">
               <Image
-                src="/images/Logo/fit-med.png" // Pastikan nama file & folder di public/ sudah benar
+                src="/images/Logo/fitmed-logo.png" // Pastikan nama file & folder di public/ sudah benar
                 alt="Logo Fit Med Medical"
                 fill
                 className="object-contain transition-transform duration-300 group-hover:scale-110"
