@@ -1,5 +1,6 @@
 import { Instagram, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-20">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2 mb-8">
-              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl italic shadow-lg shadow-blue-600/20 text-white">F</div>
+              <div className="relative w-10 h-10 md:w-12 md:h-12 shrink-0 overflow-hidden">
+                <Image src="/images/Logo/fitmed-logo.png" alt="Logo Fit Med Medical" fill className="object-contain transition-transform duration-300 group-hover:scale-110" priority />
+              </div>
               <span className="text-2xl font-black tracking-tighter uppercase italic">
                 Fit Med <span className="text-blue-500">Medical</span>
               </span>
