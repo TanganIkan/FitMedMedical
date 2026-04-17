@@ -97,13 +97,13 @@ export default function Hero() {
           <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="mt-16 lg:mt-0 lg:col-span-6 relative z-10 flex items-center justify-center">
             <div className="relative w-full max-w-none group">
               <div
-                className="relative hidden lg:block" // Tambahkan 'hidden' untuk mobile, 'lg:block' untuk desktop
+                className="relative hidden lg:block"
                 style={{
                   maskImage: "linear-gradient(to bottom, black 70%, transparent 98%)",
                   WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 98%)",
                 }}
               >
-                <img src="/images/hero.png" alt="Tim Medis FIT MED MEDICAL" className="w-full h-auto object-contain transform scale-[1.0] origin-bottom transition-transform duration-1000 hover:scale-[1.03]" />
+                <img src="/images/hero.webp" alt="Tim Medis FIT MED MEDICAL" className="w-full h-auto object-contain transform scale-[1.0] origin-bottom transition-transform duration-1000 hover:scale-[1.03]" />
               </div>
 
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] bg-blue-400/10 rounded-full blur-[130px] -z-10 pointer-events-none" />

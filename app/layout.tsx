@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Fit Med Medical",
     images: [
       {
-        url: "/images/Logo/fit-med.png", // Menggunakan logo persegi agar tampil rapi di thumbnail WhatsApp
+        url: "/images/Logo/fit-med.png",
         width: 400,
         height: 400,
         alt: "Fit Med Medical Logo",
@@ -42,15 +42,6 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-  // 3. Twitter Card
-  twitter: {
-    card: "summary", // Menggunakan 'summary' cocok untuk logo persegi
-    title: "Fit Med Medical | Bali Medical Home Service",
-    description: "24/7 doctor on call, IV therapy, and home care services directly to your location in Bali.",
-    images: ["/images/Logo/fit-med.png"],
-  },
-
-  // 4. Favicon
   icons: {
     icon: "/images/Logo/fit-med.png",
     apple: "/images/Logo/fit-med.png",
