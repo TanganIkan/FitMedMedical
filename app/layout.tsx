@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-  icons: {
-    icon: "/images/Logo/fit-med.png",
-    apple: "/images/Logo/fit-med.png",
-  },
+  // icons: {
+  //   icon: "/images/Logo/fit-med.png",
+  //   apple: "/images/Logo/fit-med.png",
+  // },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
