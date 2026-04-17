@@ -6,9 +6,53 @@ import "./globals.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Fit Med Medical | 24/7 Bali Medical Home Service & IV Therapy",
+  description: "Top-quality healthcare delivered directly to your villa, hotel, or residence in Bali. Expert doctors, IV drip for Bali Belly, home care, and lab services.",
+  keywords: [
+    "bali medical home service 24/7",
+    "doctor on call villa and hotel in bali",
+    "mobile medical clinic denpasar bali",
+
+    "bali belly iv drip therapy treatment",
+    "hangover and immune booster infusion bali",
+    "nurse home visit and wound care bali",
+    "home lab service and health checkup denpasar",
+
+    "book doctor via whatsapp bali",
+    "online medical consultation and prescription bali",
+    "fast response medical assistance canggu denpasar",
+  ],
+  authors: [{ name: "Fit Med Medical Team" }],
+  creator: "Fit Med Medical Centre",
+
+  openGraph: {
+    title: "Fit Med Medical | Bali Medical Home Service",
+    description: "Certified medical professionals delivered to your door. 24/7 doctor consultations, IV therapies, and home care in Bali.",
+    url: "https://fitmedmedical.com",
+    siteName: "Fit Med Medical",
+    images: [
+      {
+        url: "/images/Logo/fit-med.png", // Menggunakan logo persegi agar tampil rapi di thumbnail WhatsApp
+        width: 400,
+        height: 400,
+        alt: "Fit Med Medical Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  // 3. Twitter Card
+  twitter: {
+    card: "summary", // Menggunakan 'summary' cocok untuk logo persegi
+    title: "Fit Med Medical | Bali Medical Home Service",
+    description: "24/7 doctor on call, IV therapy, and home care services directly to your location in Bali.",
+    images: ["/images/Logo/fit-med.png"],
+  },
+
+  // 4. Favicon
   icons: {
     icon: "/images/Logo/fit-med.png",
-
     apple: "/images/Logo/fit-med.png",
   },
 };
