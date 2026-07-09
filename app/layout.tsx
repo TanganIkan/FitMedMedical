@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import ProgressBar from "./components/ProgressBar";
 import "./globals.css";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Fit Med Medical | 24/7 Bali Medical Home Service & IV Therapy",
@@ -12,19 +13,16 @@ export const metadata: Metadata = {
     "bali medical home service 24/7",
     "doctor on call villa and hotel in bali",
     "mobile medical clinic denpasar bali",
-
     "bali belly iv drip therapy treatment",
     "hangover and immune booster infusion bali",
     "nurse home visit and wound care bali",
     "home lab service and health checkup denpasar",
-
     "book doctor via whatsapp bali",
     "online medical consultation and prescription bali",
     "fast response medical assistance canggu denpasar",
   ],
   authors: [{ name: "Fit Med Medical Team" }],
   creator: "Fit Med Medical Centre",
-
   openGraph: {
     title: "Fit Med Medical | Bali Medical Home Service",
     description: "Certified medical professionals delivered to your door. 24/7 doctor consultations, IV therapies, and home care in Bali.",
@@ -41,7 +39,6 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-
   icons: {
     icon: "/images/Logo/fit-med.png",
     apple: "/images/Logo/fit-med.png",
@@ -51,6 +48,24 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        {/* Google Ads Global Site Tag */}
+        <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=AW-18255807725`} />
+        <Script
+          id="google-ads-tag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              
+              gtag('config', 'AW-18255807725'); 
+            `,
+          }}
+        />
+      </head>
+
       <body className="antialiased bg-white text-slate-900">
         <Suspense fallback={null}>
           <ProgressBar />
