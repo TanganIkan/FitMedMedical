@@ -691,23 +691,23 @@ export const servicesData = [
           },
         ],
       },
-      {
-        id: "candida-iv",
-        name: "Candida IV Treatment",
-        price: "1.400.000",
-        image: "/images/IV-Therapy-Services/012.webp",
-        desc: "Candida control infusion. Tackles yeast overgrowth at its source with targeted nutrients to restore balance and wellbeing.",
-        benefits: [
-          {
-            title: "Composition",
-            text: "• Crystalloid (Ringers Lactate) or Saline 100ml\n• Antifungal Broad Spectrum 200ml",
-          },
-          {
-            title: "List Symptoms",
-            text: "• Candida Overgrowth / Fungal Infections\n• Oral Thrush / Digestive Issues\n• Autoimmune Diseases / Brain Fog\n• Skin Issues / Mood Swings\n• Vaginal Infections / Carbohydrate Cravings",
-          },
-        ],
-      },
+      // {
+      //   id: "candida-iv",
+      //   name: "Candida IV Treatment",
+      //   price: "1.400.000",
+      //   image: "/images/IV-Therapy-Services/012.webp",
+      //   desc: "Candida control infusion. Tackles yeast overgrowth at its source with targeted nutrients to restore balance and wellbeing.",
+      //   benefits: [
+      //     {
+      //       title: "Composition",
+      //       text: "• Crystalloid (Ringers Lactate) or Saline 100ml\n• Antifungal Broad Spectrum 200ml",
+      //     },
+      //     {
+      //       title: "List Symptoms",
+      //       text: "• Candida Overgrowth / Fungal Infections\n• Oral Thrush / Digestive Issues\n• Autoimmune Diseases / Brain Fog\n• Skin Issues / Mood Swings\n• Vaginal Infections / Carbohydrate Cravings",
+      //     },
+      //   ],
+      // },
       {
         id: "gym-power",
         name: "Gym Power Infusion",
