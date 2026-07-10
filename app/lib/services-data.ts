@@ -43,34 +43,34 @@ export const servicesData = [
           { title: "Aesthetic Doctor", text: "Consult with medical practitioner with expertise in aesthetic or cosmetic medicine." },
         ],
       },
-      {
-        id: "prescription",
-        name: "Online Medical Prescription",
-        price: "20.000",
-        desc: "Online medical prescriptions allow patients to receive medications remotely through secure virtual consultations.",
-        image: "/images/Doctor-Consultation/Online-Medical-Prescription.webp",
-        benefits: [
-          { title: "Convenience", text: "Receive prescriptions without visiting a physical clinic, saving time and effort." },
-          { title: "Accessibility", text: "Improves access to medications for patients in remote areas." },
-          { title: "Time Efficient", text: "Reduces travel time and waiting at clinics or pharmacies." },
-          { title: "Privacy", text: "Provides a discreet way to obtain prescription medications." },
-          { title: "Continuity of Care", text: "Ensures consistent management of chronic conditions with timely prescription refills." },
-        ],
-      },
-      {
-        id: "leave-letter",
-        name: "Online Sick Leave Letter",
-        price: "75.000",
-        desc: "Online sick leave letters allow individuals to consult healthcare professionals remotely and obtain medical certificates through digital platforms.",
-        image: "/images/Doctor-Consultation/Online-Sick-Leave-Letter.webp",
-        benefits: [
-          { title: "Convenience", text: "Receive prescriptions without visiting a physical clinic, saving time and effort." },
-          { title: "Accessibility", text: "Easy access for individuals in remote areas or with limited mobility." },
-          { title: "Time Saving", text: "Avoid travel time and long waiting queues." },
-          { title: "Efficient", text: "Fast and simple process through online consultation." },
-          { title: "Reduce Exposure", text: "Minimizes exposure to illness by avoiding in-person visits." },
-        ],
-      },
+      // {
+      //   id: "prescription",
+      //   name: "Online Medical Prescription",
+      //   price: "20.000",
+      //   desc: "Online medical prescriptions allow patients to receive medications remotely through secure virtual consultations.",
+      //   image: "/images/Doctor-Consultation/Online-Medical-Prescription.webp",
+      //   benefits: [
+      //     { title: "Convenience", text: "Receive prescriptions without visiting a physical clinic, saving time and effort." },
+      //     { title: "Accessibility", text: "Improves access to medications for patients in remote areas." },
+      //     { title: "Time Efficient", text: "Reduces travel time and waiting at clinics or pharmacies." },
+      //     { title: "Privacy", text: "Provides a discreet way to obtain prescription medications." },
+      //     { title: "Continuity of Care", text: "Ensures consistent management of chronic conditions with timely prescription refills." },
+      //   ],
+      // },
+      // {
+      //   id: "leave-letter",
+      //   name: "Online Sick Leave Letter",
+      //   price: "75.000",
+      //   desc: "Online sick leave letters allow individuals to consult healthcare professionals remotely and obtain medical certificates through digital platforms.",
+      //   image: "/images/Doctor-Consultation/Online-Sick-Leave-Letter.webp",
+      //   benefits: [
+      //     { title: "Convenience", text: "Receive prescriptions without visiting a physical clinic, saving time and effort." },
+      //     { title: "Accessibility", text: "Easy access for individuals in remote areas or with limited mobility." },
+      //     { title: "Time Saving", text: "Avoid travel time and long waiting queues." },
+      //     { title: "Efficient", text: "Fast and simple process through online consultation." },
+      //     { title: "Reduce Exposure", text: "Minimizes exposure to illness by avoiding in-person visits." },
+      //   ],
+      // },
     ],
   },
   {
@@ -570,36 +570,36 @@ export const servicesData = [
           },
         ],
       },
-      {
-        id: "nad-plus",
-        name: "Pure NAD+ Anti Aging",
-        price: "2.390.000",
-        image: "/images/IV-Therapy-Services/003.webp",
-        desc: "Pure NAD+ infusion for anti-aging & cellular renewal. High-dose NAD+ fuels mitochondria, boosts DNA repair. Get optimal results with an oversight by our certified doctor.",
-        benefits: [
-          {
-            title: "Benefit",
-            text: "• Anti-Aging and Chronic Disease\n• Energy and Mental Health\n• Healthspan and Human Performance\n• Reduced Fatigue and More Energy\n• Increased Endurance and Physical Performance",
-          },
-          {
-            title: "Composition",
-            text: "• Saline infusion solution (NaCl 0,9%) 500ml\n• Nicotinamide Adenine Dinucleotide (100mg-750mg)",
-          },
-        ],
-      },
-      {
-        id: "booster-nad-plus",
-        name: "Booster NAD+ Anti Aging",
-        price: "1.900.000",
-        image: "/images/IV-Therapy-Services/004.webp",
-        desc: "Energy, anti-aging & cellular repair. NAD+ infusion enhances mitochondrial function, supports DNA repair, cognitive clarity, endurance, and oxidative defense.",
-        benefits: [
-          {
-            title: "Composition",
-            text: "• Saline solution 500ml\n• Vitamin A, C, D, E\n• Vitamin B-Complex (B1, B2, B5, B6, B7, B12)\n• Folic Acid, Zinc, L-carnitine, Magnesium",
-          },
-        ],
-      },
+      // {
+      //   id: "nad-plus",
+      //   name: "Pure NAD+ Anti Aging",
+      //   price: "2.390.000",
+      //   image: "/images/IV-Therapy-Services/003.webp",
+      //   desc: "Pure NAD+ infusion for anti-aging & cellular renewal. High-dose NAD+ fuels mitochondria, boosts DNA repair. Get optimal results with an oversight by our certified doctor.",
+      //   benefits: [
+      //     {
+      //       title: "Benefit",
+      //       text: "• Anti-Aging and Chronic Disease\n• Energy and Mental Health\n• Healthspan and Human Performance\n• Reduced Fatigue and More Energy\n• Increased Endurance and Physical Performance",
+      //     },
+      //     {
+      //       title: "Composition",
+      //       text: "• Saline infusion solution (NaCl 0,9%) 500ml\n• Nicotinamide Adenine Dinucleotide (100mg-750mg)",
+      //     },
+      //   ],
+      // },
+      // {
+      //   id: "booster-nad-plus",
+      //   name: "Booster NAD+ Anti Aging",
+      //   price: "1.900.000",
+      //   image: "/images/IV-Therapy-Services/004.webp",
+      //   desc: "Energy, anti-aging & cellular repair. NAD+ infusion enhances mitochondrial function, supports DNA repair, cognitive clarity, endurance, and oxidative defense.",
+      //   benefits: [
+      //     {
+      //       title: "Composition",
+      //       text: "• Saline solution 500ml\n• Vitamin A, C, D, E\n• Vitamin B-Complex (B1, B2, B5, B6, B7, B12)\n• Folic Acid, Zinc, L-carnitine, Magnesium",
+      //     },
+      //   ],
+      // },
       {
         id: "basic-immune",
         name: "Basic Immune Booster",
