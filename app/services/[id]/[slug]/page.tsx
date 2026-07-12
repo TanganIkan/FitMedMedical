@@ -9,9 +9,9 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { ArrowLeft, Phone, BadgeCheck, Zap, ShieldCheck, Clock } from "lucide-react";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
 
 export default function ServiceDetailPage() {
   const params = useParams();
