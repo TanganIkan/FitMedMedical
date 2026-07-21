@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone, Home, ChevronDown, Heart, Syringe, Beaker, Stethoscope, Menu, X, ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import WAButton from "@/app/components/WAButton";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -108,14 +109,10 @@ export default function Navbar() {
           </ul>
 
           {/* CTA Book Now (TETAP DI KANAN) */}
-          <Link
-            href="https://wa.me/62085743333986"
-            target="_blank"
-            className="flex items-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-full text-[10px] font-black shadow-lg hover:bg-slate-950 transition-all italic uppercase tracking-widest"
-          >
+          <WAButton className="flex items-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-full text-[10px] font-black shadow-lg hover:bg-slate-950 transition-all italic uppercase tracking-widest">
             <Phone size={14} className="hidden xs:block" />
             Book Now
-          </Link>
+          </WAButton>
         </nav>
 
         {/* MOBILE SIDEBAR (SLIDE FROM LEFT) */}
@@ -168,9 +165,9 @@ export default function Navbar() {
 
                 {/* Footer Sidebar */}
                 <div className="mt-auto pt-10">
-                  <Link href="https://wa.me/62085743333986" className="w-full py-5 bg-blue-600 text-white rounded-[24px] font-black text-[11px] uppercase tracking-widest italic flex items-center justify-center gap-3">
+                  <WAButton className="w-full py-5 bg-blue-600 text-white rounded-[24px] font-black text-[11px] uppercase tracking-widest italic flex items-center justify-center gap-3">
                     <Phone size={16} /> Emergency Booking
-                  </Link>
+                  </WAButton>
                 </div>
               </motion.div>
             </>

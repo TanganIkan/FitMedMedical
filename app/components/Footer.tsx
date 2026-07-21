@@ -1,6 +1,7 @@
 import { Instagram, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import WAButton from "@/app/components/WAButton";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -81,10 +82,10 @@ export default function Footer() {
                 <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-lg">
                   <Phone className="w-5 h-5" />
                 </div>
-                <Link href="https://wa.me/6285743333986" target="_blank">
+                <WAButton className="flex flex-col text-left hover:opacity-80 transition-opacity">
                   <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1 italic">WhatsApp 24/7</p>
                   <p className="text-sm font-bold text-slate-200">+62 85 743 333 986</p>
-                </Link>
+                </WAButton>
               </div>
               <div className="flex gap-4">
                 <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-500 shrink-0">
