@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Phone, CheckCircle2, ShieldCheck, UserCheck, Clock3, HeartPlus } from "lucide-react";
+import WAButton from "@/app/components/WAButton";
 
 export default function Hero() {
   const highlights = [
@@ -74,10 +75,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className="mt-8 md:mt-12 flex flex-col sm:flex-row flex-wrap gap-6 items-center md:items-start">
-              <Link
-                href="https://wa.me/6285743333986"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 bg-blue-600 text-white font-black text-[10px] md:text-xs uppercase tracking-[0.2em] rounded-full hover:bg-slate-900 transition-all duration-500 transform hover:scale-105 active:scale-95 shadow-2xl shadow-slate-900/20 group italic whitespace-nowrap"
-              >
+              <WAButton className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 bg-blue-600 text-white font-black text-[10px] md:text-xs uppercase tracking-[0.2em] rounded-full hover:bg-slate-900 transition-all duration-500 transform hover:scale-105 active:scale-95 shadow-2xl shadow-slate-900/20 group italic whitespace-nowrap">
                 <div className="relative">
                   <Phone className="w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform duration-500" />
                   <span className="absolute -top-1 -right-1 w-2 h-2 bg-emerald-500 animate-pulse rounded-full" />
@@ -85,7 +83,7 @@ export default function Hero() {
 
                 <span>Free Consultation</span>
                 <span className="transform group-hover:translate-x-1 transition-transform duration-500">→</span>
-              </Link>
+              </WAButton>
 
               <div className="flex items-center gap-2 text-slate-500 text-[11px] md:text-sm font-bold uppercase tracking-wider">
                 <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-emerald-500 shrink-0" />
