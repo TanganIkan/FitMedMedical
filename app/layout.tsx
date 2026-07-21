@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "nurse home visit and wound care bali",
     "home lab service and health checkup denpasar",
     "book doctor via whatsapp bali",
-    "24/7 doctor teleconsultation bali", // <-- SUDAH DIPERBAIKI (Aman dari pelanggaran)
+    "24/7 doctor teleconsultation bali",
     "fast response medical assistance canggu denpasar",
   ],
   authors: [{ name: "Fit Med Medical Team" }],
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        {/* Google Ads Global Site Tag - Fondasi Pelacakan */}
+      <body className="antialiased bg-white text-slate-900">
+        {/* Google Ads Global Site Tag - Dipindah ke dalam body */}
         <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-18255807725" />
         <Script
           id="google-ads-tag"
@@ -64,9 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
-      </head>
 
-      <body className="antialiased bg-white text-slate-900">
         <Suspense fallback={null}>
           <ProgressBar />
           <Navbar />
